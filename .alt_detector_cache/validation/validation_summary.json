@@ -1,0 +1,637 @@
+{
+  "executed_at": "2026-10-16T22:18:16.233756+00:00",
+  "accounts_targeted": 24,
+  "accounts_collected_successfully": 24,
+  "collection_failures": {},
+  "categories_tested": {
+    "target_primary": 1,
+    "known_related_candidate": 1,
+    "sparse_public_info": 1,
+    "small_group_peer": 8,
+    "substantial_activity": 4,
+    "inaccessible_partial_info": 1,
+    "popular_group_member": 2,
+    "unrelated_control": 4,
+    "sparse_or_inaccessible": 2
+  },
+  "total_pairs_evaluated": 25,
+  "runtime_seconds": 302.951,
+  "peak_rss_mb": 195.2,
+  "memory_delta_mb": 15.46,
+  "http_requests_sent": 250,
+  "cache_hits": 0,
+  "http_status_counts": {
+    "200": 183,
+    "429": 67
+  },
+  "rate_limits_encountered": 67,
+  "inaccessible_endpoints": {
+    "users.username_history": "HTTP 429 (rate limit exceeded)",
+    "inventory.can_view": "HTTP 429 (rate limit exceeded)"
+  },
+  "sample_pair_assessments": [
+    {
+      "pair": "witrecx64 (93910323) <-> witrecx (2349691539)",
+      "expected_relationship": "related_or_linked",
+      "adjudication": "weakly_labeled",
+      "baseline_score": 0.8867,
+      "confidence_band": "Strong evidence",
+      "family_scores": {
+        "lexical_naming": 0.8728,
+        "group_structure": 0.6608,
+        "social_graph": 0.666,
+        "profile_avatar": 0.2712,
+        "activity_games": 0.0,
+        "graph_topology": 0.8946
+      },
+      "note": "witrecx64 vs witrecx (root handle + identical high ranks in 3 small/medium groups + direct friend + 15 mutuals)"
+    },
+    {
+      "pair": "witrecx64 (93910323) <-> witrecx_416 (8814991503)",
+      "expected_relationship": "uncertain_unverified",
+      "adjudication": "uncertain",
+      "baseline_score": 0.2282,
+      "confidence_band": "Insufficient evidence",
+      "family_scores": {
+        "lexical_naming": 0.8809,
+        "group_structure": 0.0,
+        "social_graph": 0.0,
+        "profile_avatar": 0.1346,
+        "activity_games": 0.04,
+        "graph_topology": 0.0172
+      },
+      "note": "witrecx64 vs witrecx_416 (handle stem + 416 tag, but 0 friends and 0 groups; unverified)"
+    },
+    {
+      "pair": "witrecx64 (93910323) <-> mineturtle_416 (1719913571)",
+      "expected_relationship": "distinct_operators",
+      "adjudication": "weakly_labeled",
+      "baseline_score": 0.4025,
+      "confidence_band": "Weak evidence",
+      "family_scores": {
+        "lexical_naming": 0.1758,
+        "group_structure": 0.5752,
+        "social_graph": 0.5682,
+        "profile_avatar": 0.1137,
+        "activity_games": 0.0,
+        "graph_topology": 0.7775
+      },
+      "note": "witrecx64 vs mineturtle_416 (small group peer in Paragon Armaments with shared _416 clan tag)"
+    },
+    {
+      "pair": "witrecx64 (93910323) <-> yonacool6 (7079766915)",
+      "expected_relationship": "distinct_operators",
+      "adjudication": "weakly_labeled",
+      "baseline_score": 0.3402,
+      "confidence_band": "Weak evidence",
+      "family_scores": {
+        "lexical_naming": 0.0,
+        "group_structure": 0.6034,
+        "social_graph": 0.5414,
+        "profile_avatar": 0.0,
+        "activity_games": 0.0402,
+        "graph_topology": 0.699
+      },
+      "note": "witrecx64 vs yonacool6 (small group peer in Paragon Armaments)"
+    },
+    {
+      "pair": "witrecx64 (93910323) <-> StarFireIce29 (159708565)",
+      "expected_relationship": "distinct_operators",
+      "adjudication": "weakly_labeled",
+      "baseline_score": 0.3826,
+      "confidence_band": "Weak evidence",
+      "family_scores": {
+        "lexical_naming": 0.0,
+        "group_structure": 0.6959,
+        "social_graph": 0.558,
+        "profile_avatar": 0.0718,
+        "activity_games": 0.0905,
+        "graph_topology": 0.7416
+      },
+      "note": "witrecx64 vs StarFireIce29 (friend + Paragon Armaments peer)"
+    },
+    {
+      "pair": "witrecx64 (93910323) <-> HAAGAs (81630405)",
+      "expected_relationship": "distinct_operators",
+      "adjudication": "weakly_labeled",
+      "baseline_score": 0.1866,
+      "confidence_band": "Insufficient evidence",
+      "family_scores": {
+        "lexical_naming": 0.0,
+        "group_structure": 0.56,
+        "social_graph": 0.0894,
+        "profile_avatar": 0.0864,
+        "activity_games": 0.0576,
+        "graph_topology": 0.4555
+      },
+      "note": "witrecx64 vs HAAGAs (Paragon Armaments peer)"
+    },
+    {
+      "pair": "witrecx64 (93910323) <-> ImLordOxide (3813551317)",
+      "expected_relationship": "distinct_operators",
+      "adjudication": "weakly_labeled",
+      "baseline_score": 0.315,
+      "confidence_band": "Weak evidence",
+      "family_scores": {
+        "lexical_naming": 0.0106,
+        "group_structure": 0.4863,
+        "social_graph": 0.5346,
+        "profile_avatar": 0.1483,
+        "activity_games": 0.0303,
+        "graph_topology": 0.6519
+      },
+      "note": "witrecx64 vs ImLordOxide (friend + Paragon Armaments peer)"
+    },
+    {
+      "pair": "witrecx64 (93910323) <-> Skyattack397 (379831915)",
+      "expected_relationship": "distinct_operators",
+      "adjudication": "weakly_labeled",
+      "baseline_score": 0.3649,
+      "confidence_band": "Weak evidence",
+      "family_scores": {
+        "lexical_naming": 0.0,
+        "group_structure": 0.6637,
+        "social_graph": 0.5356,
+        "profile_avatar": 0.0661,
+        "activity_games": 0.0381,
+        "graph_topology": 0.7348
+      },
+      "note": "witrecx64 vs Skyattack397 (Paragon Armaments peer)"
+    },
+    {
+      "pair": "witrecx64 (93910323) <-> Marius55555555 (146118693)",
+      "expected_relationship": "distinct_operators",
+      "adjudication": "weakly_labeled",
+      "baseline_score": 0.3485,
+      "confidence_band": "Weak evidence",
+      "family_scores": {
+        "lexical_naming": 0.0,
+        "group_structure": 0.6532,
+        "social_graph": 0.5015,
+        "profile_avatar": 0.093,
+        "activity_games": 0.0303,
+        "graph_topology": 0.619
+      },
+      "note": "witrecx64 vs Marius55555555 (Paragon Armaments peer)"
+    },
+    {
+      "pair": "witrecx64 (93910323) <-> Nominalmetal (2921625208)",
+      "expected_relationship": "distinct_operators",
+      "adjudication": "weakly_labeled",
+      "baseline_score": 0.3742,
+      "confidence_band": "Weak evidence",
+      "family_scores": {
+        "lexical_naming": 0.0,
+        "group_structure": 0.6645,
+        "social_graph": 0.5208,
+        "profile_avatar": 0.0808,
+        "activity_games": 0.0,
+        "graph_topology": 0.918
+      },
+      "note": "witrecx64 vs Nominalmetal (Paragon Armaments peer)"
+    },
+    {
+      "pair": "witrecx64 (93910323) <-> Enclamatic (1220158530)",
+      "expected_relationship": "distinct_operators",
+      "adjudication": "verified",
+      "baseline_score": 0.0169,
+      "confidence_band": "Insufficient evidence",
+      "family_scores": {
+        "lexical_naming": 0.0,
+        "group_structure": 0.0032,
+        "social_graph": 0.009,
+        "profile_avatar": 0.0685,
+        "activity_games": 0.0,
+        "graph_topology": 0.1761
+      },
+      "note": "witrecx64 vs Enclamatic (only shares 920k-member mega-group Arc I: Warriors)"
+    },
+    {
+      "pair": "witrecx64 (93910323) <-> mikelyvandevelde (68603365)",
+      "expected_relationship": "distinct_operators",
+      "adjudication": "verified",
+      "baseline_score": 0.0095,
+      "confidence_band": "Insufficient evidence",
+      "family_scores": {
+        "lexical_naming": 0.0,
+        "group_structure": 0.0,
+        "social_graph": 0.0,
+        "profile_avatar": 0.1108,
+        "activity_games": 0.0303,
+        "graph_topology": 0.0172
+      },
+      "note": "witrecx64 vs asimo3089 (unrelated control)"
+    },
+    {
+      "pair": "witrecx64 (93910323) <-> NewbTrap (13961135)",
+      "expected_relationship": "distinct_operators",
+      "adjudication": "verified",
+      "baseline_score": 0.0123,
+      "confidence_band": "Insufficient evidence",
+      "family_scores": {
+        "lexical_naming": 0.0,
+        "group_structure": 0.0,
+        "social_graph": 0.0,
+        "profile_avatar": 0.1589,
+        "activity_games": 0.0208,
+        "graph_topology": 0.0172
+      },
+      "note": "witrecx64 vs badcc (unrelated control)"
+    },
+    {
+      "pair": "witrecx64 (93910323) <-> Roblox (1)",
+      "expected_relationship": "distinct_operators",
+      "adjudication": "verified",
+      "baseline_score": 0.0161,
+      "confidence_band": "Insufficient evidence",
+      "family_scores": {
+        "lexical_naming": 0.0,
+        "group_structure": 0.0,
+        "social_graph": 0.0,
+        "profile_avatar": 0.2095,
+        "activity_games": 0.0327,
+        "graph_topology": 0.0174
+      },
+      "note": "witrecx64 vs Roblox (unrelated system account)"
+    },
+    {
+      "pair": "witrecx64 (93910323) <-> builderman (156)",
+      "expected_relationship": "distinct_operators",
+      "adjudication": "verified",
+      "baseline_score": 0.0055,
+      "confidence_band": "Insufficient evidence",
+      "family_scores": {
+        "lexical_naming": 0.0,
+        "group_structure": 0.0,
+        "social_graph": 0.0,
+        "profile_avatar": 0.0832,
+        "activity_games": 0.0,
+        "graph_topology": 0.0
+      },
+      "note": "witrecx64 vs builderman (unrelated founder account)"
+    },
+    {
+      "pair": "witrecx64 (93910323) <-> Shedletsky (261)",
+      "expected_relationship": "distinct_operators",
+      "adjudication": "verified",
+      "baseline_score": 0.0104,
+      "confidence_band": "Insufficient evidence",
+      "family_scores": {
+        "lexical_naming": 0.0,
+        "group_structure": 0.0,
+        "social_graph": 0.007,
+        "profile_avatar": 0.0763,
+        "activity_games": 0.0582,
+        "graph_topology": 0.0325
+      },
+      "note": "witrecx64 vs Shedletsky (unrelated classic account)"
+    },
+    {
+      "pair": "witrecx64 (93910323) <-> UristMcSparks (6783205)",
+      "expected_relationship": "distinct_operators",
+      "adjudication": "verified",
+      "baseline_score": 0.0119,
+      "confidence_band": "Insufficient evidence",
+      "family_scores": {
+        "lexical_naming": 0.0,
+        "group_structure": 0.0,
+        "social_graph": 0.0096,
+        "profile_avatar": 0.1308,
+        "activity_games": 0.0,
+        "graph_topology": 0.0299
+      },
+      "note": "witrecx64 vs UristMcSparks (unrelated control)"
+    },
+    {
+      "pair": "witrecx64 (93910323) <-> Colorfull_Iris (1725548849)",
+      "expected_relationship": "distinct_operators",
+      "adjudication": "weakly_labeled",
+      "baseline_score": 0.105,
+      "confidence_band": "Insufficient evidence",
+      "family_scores": {
+        "lexical_naming": 0.0,
+        "group_structure": 0.0,
+        "social_graph": 0.4335,
+        "profile_avatar": 0.0525,
+        "activity_games": 0.0,
+        "graph_topology": 0.5314
+      },
+      "note": "witrecx64 vs friend_control_1 (direct friend, distinct identity)"
+    },
+    {
+      "pair": "witrecx64 (93910323) <-> SimplyyIndex (395422980)",
+      "expected_relationship": "distinct_operators",
+      "adjudication": "weakly_labeled",
+      "baseline_score": 0.3127,
+      "confidence_band": "Weak evidence",
+      "family_scores": {
+        "lexical_naming": 0.0133,
+        "group_structure": 0.5298,
+        "social_graph": 0.4725,
+        "profile_avatar": 0.1077,
+        "activity_games": 0.0,
+        "graph_topology": 0.666
+      },
+      "note": "witrecx64 vs friend_control_2 (mutual friend, distinct identity)"
+    },
+    {
+      "pair": "witrecx64 (93910323) <-> TruePoteto (5306681491)",
+      "expected_relationship": "distinct_operators",
+      "adjudication": "weakly_labeled",
+      "baseline_score": 0.1162,
+      "confidence_band": "Insufficient evidence",
+      "family_scores": {
+        "lexical_naming": 0.0,
+        "group_structure": 0.0044,
+        "social_graph": 0.4577,
+        "profile_avatar": 0.0525,
+        "activity_games": 0.0,
+        "graph_topology": 0.6381
+      },
+      "note": "witrecx64 vs friend_control_3 (mutual friend, distinct identity)"
+    },
+    {
+      "pair": "witrecx64 (93910323) <-> teh_saint (419857724)",
+      "expected_relationship": "distinct_operators",
+      "adjudication": "weakly_labeled",
+      "baseline_score": 0.1188,
+      "confidence_band": "Insufficient evidence",
+      "family_scores": {
+        "lexical_naming": 0.0,
+        "group_structure": 0.0075,
+        "social_graph": 0.4863,
+        "profile_avatar": 0.0525,
+        "activity_games": 0.0,
+        "graph_topology": 0.5881
+      },
+      "note": "witrecx64 vs friend_control_4 (mutual friend, distinct identity)"
+    },
+    {
+      "pair": "Roblox (1) <-> builderman (156)",
+      "expected_relationship": "related_or_linked",
+      "adjudication": "verified",
+      "baseline_score": 0.0162,
+      "confidence_band": "Insufficient evidence",
+      "family_scores": {
+        "lexical_naming": 0.0,
+        "group_structure": 0.0,
+        "social_graph": 0.0,
+        "profile_avatar": 0.2475,
+        "activity_games": 0.0,
+        "graph_topology": 0.0
+      },
+      "note": "Roblox (ID 1) vs builderman (ID 156) (official corporate/founder account pair)"
+    },
+    {
+      "pair": "John Doe (2) <-> Jane Doe (3)",
+      "expected_relationship": "related_or_linked",
+      "adjudication": "verified",
+      "baseline_score": 0.1972,
+      "confidence_band": "Insufficient evidence",
+      "family_scores": {
+        "lexical_naming": 0.4025,
+        "group_structure": 0.0,
+        "social_graph": 0.0,
+        "profile_avatar": 0.5769,
+        "activity_games": 0.0,
+        "graph_topology": 0.4324
+      },
+      "note": "John Doe (ID 2) vs Jane Doe (ID 3) (official simultaneous test accounts created 2006-02-27)"
+    },
+    {
+      "pair": "mikelyvandevelde (68603365) <-> NewbTrap (13961135)",
+      "expected_relationship": "distinct_operators",
+      "adjudication": "verified",
+      "baseline_score": 0.0782,
+      "confidence_band": "Insufficient evidence",
+      "family_scores": {
+        "lexical_naming": 0.0,
+        "group_structure": 0.0,
+        "social_graph": 0.0,
+        "profile_avatar": 0.1885,
+        "activity_games": 1.0,
+        "graph_topology": 0.4324
+      },
+      "note": "asimo3089 vs badcc (known distinct human co-developers of Badimo; critical hard-negative test!)"
+    },
+    {
+      "pair": "Shedletsky (261) <-> mikelyvandevelde (68603365)",
+      "expected_relationship": "distinct_operators",
+      "adjudication": "verified",
+      "baseline_score": 0.0019,
+      "confidence_band": "Insufficient evidence",
+      "family_scores": {
+        "lexical_naming": 0.0,
+        "group_structure": 0.0,
+        "social_graph": 0.0,
+        "profile_avatar": 0.0,
+        "activity_games": 0.0455,
+        "graph_topology": 0.0
+      },
+      "note": "Shedletsky vs asimo3089 (distinct developers who share Badimo group)"
+    }
+  ],
+  "benchmark_comparison": {
+    "total_pairs_submitted": 48,
+    "evaluated_pairs": 46,
+    "positive_pairs": 11,
+    "negative_pairs": 35,
+    "uncertain_excluded_pairs": 2,
+    "duplicates_removed": 0,
+    "unique_operator_clusters": 29,
+    "n_splits": 4,
+    "selected_model_name": "random_forest",
+    "selection_rationale": "Selected 'random_forest' (PR-AUC=0.951, F1=0.900) compared to transparent_baseline (PR-AUC=0.894, F1=0.900) across 4 group-isolated folds (29 operator clusters). Operating mode set to 'research_weak_supervision'.",
+    "baseline_metrics": {
+      "model_name": "transparent_baseline",
+      "precision": 1.0,
+      "recall": 0.8182,
+      "f1": 0.9,
+      "pr_auc": 0.8943,
+      "roc_auc": 0.9065,
+      "brier_score": 0.0618,
+      "expected_calibration_error": 0.0774,
+      "confusion_matrix": [
+        [
+          35,
+          0
+        ],
+        [
+          2,
+          9
+        ]
+      ],
+      "fold_f1_mean": 0.9,
+      "fold_f1_ci95": 0.098,
+      "fold_pr_auc_mean": 0.9083,
+      "fold_pr_auc_ci95": 0.0963,
+      "performance_by_confidence_band": {
+        "Strong evidence": {
+          "count": 9,
+          "positives": 9,
+          "empirical_precision": 1.0
+        },
+        "Moderate evidence": {
+          "count": 0,
+          "positives": 0,
+          "empirical_precision": null
+        },
+        "Weak evidence": {
+          "count": 8,
+          "positives": 0,
+          "empirical_precision": 0.0
+        },
+        "Insufficient evidence": {
+          "count": 29,
+          "positives": 2,
+          "empirical_precision": 0.069
+        }
+      }
+    },
+    "candidate_model_metrics": {
+      "logistic_regression": {
+        "model_name": "logistic_regression",
+        "precision": 0.9091,
+        "recall": 0.9091,
+        "f1": 0.9091,
+        "pr_auc": 0.9443,
+        "roc_auc": 0.9662,
+        "brier_score": 0.0395,
+        "expected_calibration_error": 0.0305,
+        "confusion_matrix": [
+          [
+            34,
+            1
+          ],
+          [
+            1,
+            10
+          ]
+        ],
+        "fold_f1_mean": 0.9143,
+        "fold_f1_ci95": 0.0863,
+        "fold_pr_auc_mean": 0.9667,
+        "fold_pr_auc_ci95": 0.0566,
+        "performance_by_confidence_band": {
+          "Strong evidence": {
+            "count": 11,
+            "positives": 10,
+            "empirical_precision": 0.9091
+          },
+          "Moderate evidence": {
+            "count": 0,
+            "positives": 0,
+            "empirical_precision": null
+          },
+          "Weak evidence": {
+            "count": 0,
+            "positives": 0,
+            "empirical_precision": null
+          },
+          "Insufficient evidence": {
+            "count": 35,
+            "positives": 1,
+            "empirical_precision": 0.0286
+          }
+        }
+      },
+      "random_forest": {
+        "model_name": "random_forest",
+        "precision": 1.0,
+        "recall": 0.8182,
+        "f1": 0.9,
+        "pr_auc": 0.9508,
+        "roc_auc": 0.9662,
+        "brier_score": 0.0393,
+        "expected_calibration_error": 0.0321,
+        "confusion_matrix": [
+          [
+            35,
+            0
+          ],
+          [
+            2,
+            9
+          ]
+        ],
+        "fold_f1_mean": 0.9,
+        "fold_f1_ci95": 0.098,
+        "fold_pr_auc_mean": 0.9792,
+        "fold_pr_auc_ci95": 0.0354,
+        "performance_by_confidence_band": {
+          "Strong evidence": {
+            "count": 8,
+            "positives": 8,
+            "empirical_precision": 1.0
+          },
+          "Moderate evidence": {
+            "count": 1,
+            "positives": 1,
+            "empirical_precision": 1.0
+          },
+          "Weak evidence": {
+            "count": 1,
+            "positives": 1,
+            "empirical_precision": 1.0
+          },
+          "Insufficient evidence": {
+            "count": 36,
+            "positives": 1,
+            "empirical_precision": 0.0278
+          }
+        }
+      },
+      "hist_gradient_boosting": {
+        "model_name": "hist_gradient_boosting",
+        "precision": 1.0,
+        "recall": 0.8182,
+        "f1": 0.9,
+        "pr_auc": 0.8725,
+        "roc_auc": 0.8935,
+        "brier_score": 0.0435,
+        "expected_calibration_error": 0.041,
+        "confusion_matrix": [
+          [
+            35,
+            0
+          ],
+          [
+            2,
+            9
+          ]
+        ],
+        "fold_f1_mean": 0.9,
+        "fold_f1_ci95": 0.098,
+        "fold_pr_auc_mean": 0.8753,
+        "fold_pr_auc_ci95": 0.1223,
+        "performance_by_confidence_band": {
+          "Strong evidence": {
+            "count": 9,
+            "positives": 9,
+            "empirical_precision": 1.0
+          },
+          "Moderate evidence": {
+            "count": 0,
+            "positives": 0,
+            "empirical_precision": null
+          },
+          "Weak evidence": {
+            "count": 0,
+            "positives": 0,
+            "empirical_precision": null
+          },
+          "Insufficient evidence": {
+            "count": 37,
+            "positives": 2,
+            "empirical_precision": 0.0541
+          }
+        }
+      }
+    }
+  },
+  "validation_limitations": [
+    "Public Roblox profiles do not expose verified ground-truth operator identity; pairs such as witrecx64 <-> witrecx are treated as strongly supported analytical leads (weakly_labeled), not confirmed ground truth.",
+    "Hard-negative evaluation on known distinct co-developers (asimo3089 <-> badcc) demonstrates that shared studio group ownership and friendship alone yield Weak/Moderate scores rather than false Strong attributions when lexical handles are distinct.",
+    "Sparse handle-only candidates (witrecx_416, 0 groups, 0 friends) are bounded to Weak evidence by the single-family corroboration guardrail."
+  ]
+}

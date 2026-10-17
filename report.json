@@ -1,0 +1,3949 @@
+{
+  "schema_version": "1.0.0",
+  "model_version": "1.0.0-baseline+hgbt",
+  "feature_schema_version": "1.0.0",
+  "generated_at": "2026-10-17T02:52:41.175678+00:00",
+  "input_identifier": "Aldesmodeus",
+  "resolved_user_id": 1504805831,
+  "resolved_username": "Aldesmodeus",
+  "resolved_display_name": "Aldes",
+  "status": "completed",
+  "sources_queried_count": 14,
+  "unique_endpoints_queried": [
+    "avatar.details",
+    "friends.followers_count",
+    "friends.followings_count",
+    "friends.list",
+    "games.user_created",
+    "games.user_favorites",
+    "groups.members",
+    "groups.user_roles",
+    "inventory.can_view",
+    "users.batch_get_by_ids",
+    "users.profile",
+    "users.resolve_usernames",
+    "users.search",
+    "users.username_history"
+  ],
+  "inaccessible_endpoints": {
+    "badges.user_badges": "https://badges.roblox.com/v1/users/{userId}/badges requires authentication (HTTP 401 code 9002)",
+    "friends.followers_list": "https://friends.roblox.com/v1/users/{userId}/followers requires authentication (HTTP 401 code 9002)",
+    "friends.followings_list": "https://friends.roblox.com/v1/users/{userId}/followings requires authentication (HTTP 401 code 9002)",
+    "users.search": "HTTP 429 (rate limit exceeded)",
+    "users.username_history": "HTTP 429 (rate limit exceeded)",
+    "inventory.can_view": "HTTP 429 (rate limit exceeded)"
+  },
+  "candidates_discovered_count": 18,
+  "candidates_analyzed_count": 18,
+  "scoring_methodology": "Layered pipeline: Layer A TransparentBaselineScorer (weights v1.0.0) + Layer B Supervised (disabled/untrained, mode=heuristic_baseline_primary) + Layer C Unsupervised IsolationForest/LOF + Layer D Heterogeneous Graph.",
+  "threshold_status": "provisional",
+  "assessments": [
+    {
+      "candidate_user_id": 356366181,
+      "candidate_username": "MajorKillerMinecraft",
+      "candidate_display_name": "Major",
+      "discovery_reasons": [
+        {
+          "strategy": "direct_friend",
+          "detail": "Direct public friend of target (Aldesmodeus)",
+          "source_endpoint": "https://friends.roblox.com/v1/users/1504805831/friends",
+          "prior_weight": 0.38
+        }
+      ],
+      "baseline_score": 0.2462,
+      "ml_score": null,
+      "combined_score": 0.2462,
+      "confidence_band": "Insufficient evidence",
+      "confidence_interpretation": "Publicly observable signals do not provide meaningful evidence of shared account operation.",
+      "threshold_status": "provisional",
+      "scoring_mode": "heuristic_baseline_primary",
+      "supporting_evidence": [
+        {
+          "signal_name": "social_graph_overlap",
+          "family": "social_graph",
+          "direction": "supporting",
+          "strength": "high",
+          "value_summary": "direct_friend=True, mutual_friends=9 (containment=0.14)",
+          "explanation": "Direct public friends, sharing 9 mutual third-party friend(s) (containment 0.14).",
+          "contribution": 0.0969
+        }
+      ],
+      "conflicting_evidence": [
+        {
+          "signal_name": "only_popular_groups_shared",
+          "family": "group_structure",
+          "direction": "against",
+          "strength": "medium",
+          "value_summary": "shared_groups=3 (all >2,500 members)",
+          "explanation": "Shared groups consist solely of large/popular communities with low discriminative value for identity linkage.",
+          "contribution": 0.0
+        }
+      ],
+      "missing_evidence": [
+        {
+          "signal_name": "favorite_games_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'favorite_games_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "created_games_similarity",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'created_games_similarity' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "inventory_asset_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'inventory_asset_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "activity_timestamp_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'activity_timestamp_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:badges.user_badges",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://badges.roblox.com/v1/users/{userId}/badges requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followers_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followers requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followings_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followings requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        }
+      ],
+      "family_scores": {
+        "lexical_naming": 0.3032,
+        "group_structure": 0.0065,
+        "social_graph": 0.4847,
+        "profile_avatar": 0.0525,
+        "activity_games": 0.0,
+        "graph_topology": 0.7455
+      },
+      "feature_contributions": {
+        "username_char_ngram_sim": 0.0208,
+        "username_lcs_ratio": 0.0508,
+        "display_name_similarity": 0.0194,
+        "shared_distinctive_affix_score": 0.0,
+        "group_jaccard": 0.0011,
+        "rarity_weighted_group_sim": 0.0009,
+        "small_group_co_membership_score": 0.0,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 0.084,
+        "mutual_friends_jaccard": 0.0031,
+        "mutual_friends_containment": 0.0098,
+        "description_similarity": 0.0,
+        "avatar_asset_overlap": 0.0,
+        "avatar_style_similarity": 0.0042,
+        "creation_burst_proximity": 0.0,
+        "graph_adamic_adar": 0.0228,
+        "graph_resource_allocation": 0.0153,
+        "graph_personalized_pagerank": 0.014,
+        "graph_same_community": 0.0
+      },
+      "raw_features": {
+        "username_char_ngram_sim": 0.2309,
+        "username_lcs_ratio": 0.4034,
+        "display_name_similarity": 0.4034,
+        "shared_distinctive_affix_score": 0.0,
+        "group_jaccard": 0.0361,
+        "rarity_weighted_group_sim": 0.0097,
+        "small_group_co_membership_score": 0.0,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 1.0,
+        "mutual_friends_jaccard": 0.0672,
+        "mutual_friends_containment": 0.1406,
+        "description_similarity": 0.0,
+        "avatar_asset_overlap": 0.0,
+        "avatar_style_similarity": 0.35,
+        "creation_burst_proximity": 0.0,
+        "favorite_games_overlap": null,
+        "created_games_similarity": null,
+        "inventory_asset_overlap": null,
+        "activity_timestamp_overlap": null,
+        "graph_adamic_adar": 0.9323,
+        "graph_resource_allocation": 0.7308,
+        "graph_personalized_pagerank": 1.0,
+        "graph_same_community": 0.0
+      },
+      "graph_metrics": {
+        "graph_adamic_adar": 0.9323,
+        "graph_resource_allocation": 0.7308,
+        "graph_personalized_pagerank": 1.0,
+        "graph_same_community": 0.0
+      },
+      "unsupervised_signals": {
+        "isolation_forest_anomaly_score": 0.389,
+        "lof_outlier_flag": 0.0,
+        "pairwise_signal_density": 0.2792,
+        "profile_archetype": "standard_active_profile",
+        "note": "Unsupervised profile archetype is separate from linkage score; sparse/outlier profiles are not automatically alts."
+      },
+      "uncertainty_notes": [
+        "Public Roblox telemetry cannot observe IP addresses, hardware/device fingerprints, or authentication cookies; scores reflect behavioral/structural correlation, not proof of identity."
+      ],
+      "alternative_explanations": [
+        "Accounts may belong to independent players who happen to intersect in one or more public communities or friend circles."
+      ],
+      "data_sources": [
+        "friends.followers_count",
+        "friends.followings_count",
+        "games.user_created",
+        "games.user_favorites",
+        "inventory.can_view",
+        "users.profile",
+        "users.username_history"
+      ],
+      "model_version": "1.0.0-baseline+hgbt",
+      "feature_schema_version": "1.0.0"
+    },
+    {
+      "candidate_user_id": 570990762,
+      "candidate_username": "NTTC_416",
+      "candidate_display_name": "NotTheTypicalCAD",
+      "discovery_reasons": [
+        {
+          "strategy": "direct_friend",
+          "detail": "Direct public friend of target (Aldesmodeus)",
+          "source_endpoint": "https://friends.roblox.com/v1/users/1504805831/friends",
+          "prior_weight": 0.38
+        }
+      ],
+      "baseline_score": 0.2433,
+      "ml_score": null,
+      "combined_score": 0.2433,
+      "confidence_band": "Insufficient evidence",
+      "confidence_interpretation": "Publicly observable signals do not provide meaningful evidence of shared account operation.",
+      "threshold_status": "provisional",
+      "scoring_mode": "heuristic_baseline_primary",
+      "supporting_evidence": [
+        {
+          "signal_name": "social_graph_overlap",
+          "family": "social_graph",
+          "direction": "supporting",
+          "strength": "medium",
+          "value_summary": "direct_friend=True, mutual_friends=0 (containment=0.00)",
+          "explanation": "Direct public friends, sharing 0 mutual third-party friend(s) (containment 0.00).",
+          "contribution": 0.2
+        },
+        {
+          "signal_name": "shared_distinctive_affix",
+          "family": "lexical_naming",
+          "direction": "supporting",
+          "strength": "medium",
+          "value_summary": "affix_score=0.65 (nums=['416'], words=[])",
+          "explanation": "Shared distinctive naming/group tokens: numbers=['416'], lexical tokens=none.",
+          "contribution": 0.0234
+        }
+      ],
+      "conflicting_evidence": [
+        {
+          "signal_name": "no_shared_groups",
+          "family": "group_structure",
+          "direction": "against",
+          "strength": "medium",
+          "value_summary": "target_groups=49, candidate_groups=8, overlap=0",
+          "explanation": "Both accounts have public group memberships (49 vs 8), but share zero groups in common.",
+          "contribution": 0.0
+        }
+      ],
+      "missing_evidence": [
+        {
+          "signal_name": "mutual_friends_jaccard",
+          "family": "social_graph",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'mutual_friends_jaccard' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "mutual_friends_containment",
+          "family": "social_graph",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'mutual_friends_containment' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "avatar_asset_overlap",
+          "family": "profile_avatar",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'avatar_asset_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "avatar_style_similarity",
+          "family": "profile_avatar",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'avatar_style_similarity' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "favorite_games_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'favorite_games_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "created_games_similarity",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'created_games_similarity' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "inventory_asset_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'inventory_asset_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "activity_timestamp_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'activity_timestamp_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:avatar.details",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "Configured HTTP request budget (110) reached",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:badges.user_badges",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://badges.roblox.com/v1/users/{userId}/badges requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followers_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followers requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followings_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followings requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "Configured HTTP request budget (110) reached",
+          "contribution": 0.0
+        }
+      ],
+      "family_scores": {
+        "lexical_naming": 0.2251,
+        "group_structure": 0.0,
+        "social_graph": 1.0,
+        "profile_avatar": 0.0245,
+        "activity_games": 0.0,
+        "graph_topology": 0.388
+      },
+      "feature_contributions": {
+        "username_char_ngram_sim": 0.0288,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.0154,
+        "shared_distinctive_affix_score": 0.0234,
+        "group_jaccard": 0.0,
+        "rarity_weighted_group_sim": 0.0,
+        "small_group_co_membership_score": 0.0,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 0.2,
+        "description_similarity": 0.002,
+        "creation_burst_proximity": 0.0,
+        "graph_adamic_adar": 0.0142,
+        "graph_resource_allocation": 0.0096,
+        "graph_personalized_pagerank": 0.0034,
+        "graph_same_community": 0.0
+      },
+      "raw_features": {
+        "username_char_ngram_sim": 0.3198,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.3198,
+        "shared_distinctive_affix_score": 0.65,
+        "group_jaccard": 0.0,
+        "rarity_weighted_group_sim": 0.0,
+        "small_group_co_membership_score": 0.0,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 1.0,
+        "mutual_friends_jaccard": null,
+        "mutual_friends_containment": null,
+        "description_similarity": 0.035,
+        "avatar_asset_overlap": null,
+        "avatar_style_similarity": null,
+        "creation_burst_proximity": 0.0,
+        "favorite_games_overlap": null,
+        "created_games_similarity": null,
+        "inventory_asset_overlap": null,
+        "activity_timestamp_overlap": null,
+        "graph_adamic_adar": 0.5811,
+        "graph_resource_allocation": 0.455,
+        "graph_personalized_pagerank": 0.2408,
+        "graph_same_community": 0.0
+      },
+      "graph_metrics": {
+        "graph_adamic_adar": 0.5811,
+        "graph_resource_allocation": 0.455,
+        "graph_personalized_pagerank": 0.2408,
+        "graph_same_community": 0.0
+      },
+      "unsupervised_signals": {
+        "isolation_forest_anomaly_score": 0.6018,
+        "lof_outlier_flag": 0.0,
+        "pairwise_signal_density": 0.2401,
+        "profile_archetype": "standard_active_profile",
+        "note": "Unsupervised profile archetype is separate from linkage score; sparse/outlier profiles are not automatically alts."
+      },
+      "uncertainty_notes": [
+        "Public Roblox telemetry cannot observe IP addresses, hardware/device fingerprints, or authentication cookies; scores reflect behavioral/structural correlation, not proof of identity.",
+        "8 of 23 pairwise features were unavailable (e.g., empty profile descriptions, private inventories, or unpopulated game favorites)."
+      ],
+      "alternative_explanations": [
+        "Shared numeric suffixes (such as group/division numbers) or shared display-name prefixes are often adopted as uniform clan tags by multiple distinct group members."
+      ],
+      "data_sources": [
+        "friends.followers_count",
+        "friends.followings_count",
+        "games.user_created",
+        "games.user_favorites",
+        "inventory.can_view",
+        "users.profile",
+        "users.username_history"
+      ],
+      "model_version": "1.0.0-baseline+hgbt",
+      "feature_schema_version": "1.0.0"
+    },
+    {
+      "candidate_user_id": 672529099,
+      "candidate_username": "lcrystal_princessl",
+      "candidate_display_name": "lcrystal_princessl",
+      "discovery_reasons": [
+        {
+          "strategy": "direct_friend",
+          "detail": "Direct public friend of target (Aldesmodeus)",
+          "source_endpoint": "https://friends.roblox.com/v1/users/1504805831/friends",
+          "prior_weight": 0.38
+        }
+      ],
+      "baseline_score": 0.1976,
+      "ml_score": null,
+      "combined_score": 0.1976,
+      "confidence_band": "Insufficient evidence",
+      "confidence_interpretation": "Publicly observable signals do not provide meaningful evidence of shared account operation.",
+      "threshold_status": "provisional",
+      "scoring_mode": "heuristic_baseline_primary",
+      "supporting_evidence": [
+        {
+          "signal_name": "social_graph_overlap",
+          "family": "social_graph",
+          "direction": "supporting",
+          "strength": "medium",
+          "value_summary": "direct_friend=True, mutual_friends=0 (containment=0.00)",
+          "explanation": "Direct public friends, sharing 0 mutual third-party friend(s) (containment 0.00).",
+          "contribution": 0.2
+        }
+      ],
+      "conflicting_evidence": [
+        {
+          "signal_name": "username_lexical_dissimilarity",
+          "family": "lexical_naming",
+          "direction": "against",
+          "strength": "low",
+          "value_summary": "core_lcs=0.00, display_sim=0.07",
+          "explanation": "No observable lexical stem overlap between 'Aldesmodeus' ('Aldes') and 'lcrystal_princessl' ('lcrystal_princessl').",
+          "contribution": 0.0
+        }
+      ],
+      "missing_evidence": [
+        {
+          "signal_name": "group_jaccard",
+          "family": "group_structure",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'group_jaccard' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "rarity_weighted_group_sim",
+          "family": "group_structure",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'rarity_weighted_group_sim' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "small_group_co_membership_score",
+          "family": "group_structure",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'small_group_co_membership_score' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "shared_elevated_role_score",
+          "family": "group_structure",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'shared_elevated_role_score' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "mutual_friends_jaccard",
+          "family": "social_graph",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'mutual_friends_jaccard' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "mutual_friends_containment",
+          "family": "social_graph",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'mutual_friends_containment' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "description_similarity",
+          "family": "profile_avatar",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'description_similarity' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "avatar_asset_overlap",
+          "family": "profile_avatar",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'avatar_asset_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "avatar_style_similarity",
+          "family": "profile_avatar",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'avatar_style_similarity' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "favorite_games_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'favorite_games_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "created_games_similarity",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'created_games_similarity' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "inventory_asset_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'inventory_asset_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "activity_timestamp_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'activity_timestamp_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:avatar.details",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "Configured HTTP request budget (110) reached",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:badges.user_badges",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://badges.roblox.com/v1/users/{userId}/badges requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followers_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followers requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followings_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followings requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "Configured HTTP request budget (110) reached",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:groups.user_roles",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "Configured HTTP request budget (110) reached",
+          "contribution": 0.0
+        }
+      ],
+      "family_scores": {
+        "lexical_naming": 0.0327,
+        "group_structure": 0.0,
+        "social_graph": 1.0,
+        "profile_avatar": 0.0,
+        "activity_games": 0.0,
+        "graph_topology": 0.4752
+      },
+      "feature_contributions": {
+        "username_char_ngram_sim": 0.0064,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.0034,
+        "shared_distinctive_affix_score": 0.0,
+        "is_direct_friend": 0.2,
+        "creation_burst_proximity": 0.0,
+        "graph_adamic_adar": 0.0112,
+        "graph_resource_allocation": 0.0093,
+        "graph_personalized_pagerank": 0.0022,
+        "graph_same_community": 0.0105
+      },
+      "raw_features": {
+        "username_char_ngram_sim": 0.0711,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.0711,
+        "shared_distinctive_affix_score": 0.0,
+        "group_jaccard": null,
+        "rarity_weighted_group_sim": null,
+        "small_group_co_membership_score": null,
+        "shared_elevated_role_score": null,
+        "is_direct_friend": 1.0,
+        "mutual_friends_jaccard": null,
+        "mutual_friends_containment": null,
+        "description_similarity": null,
+        "avatar_asset_overlap": null,
+        "avatar_style_similarity": null,
+        "creation_burst_proximity": 0.0,
+        "favorite_games_overlap": null,
+        "created_games_similarity": null,
+        "inventory_asset_overlap": null,
+        "activity_timestamp_overlap": null,
+        "graph_adamic_adar": 0.4586,
+        "graph_resource_allocation": 0.442,
+        "graph_personalized_pagerank": 0.1607,
+        "graph_same_community": 1.0
+      },
+      "graph_metrics": {
+        "graph_adamic_adar": 0.4586,
+        "graph_resource_allocation": 0.442,
+        "graph_personalized_pagerank": 0.1607,
+        "graph_same_community": 1.0
+      },
+      "unsupervised_signals": {
+        "isolation_forest_anomaly_score": 0.5587,
+        "lof_outlier_flag": 1.0,
+        "pairwise_signal_density": 0.3204,
+        "profile_archetype": "sparse_minimal_profile",
+        "note": "Unsupervised profile archetype is separate from linkage score; sparse/outlier profiles are not automatically alts."
+      },
+      "uncertainty_notes": [
+        "Public Roblox telemetry cannot observe IP addresses, hardware/device fingerprints, or authentication cookies; scores reflect behavioral/structural correlation, not proof of identity.",
+        "13 of 23 pairwise features were unavailable (e.g., empty profile descriptions, private inventories, or unpopulated game favorites)."
+      ],
+      "alternative_explanations": [
+        "Accounts may belong to independent players who happen to intersect in one or more public communities or friend circles."
+      ],
+      "data_sources": [
+        "friends.followers_count",
+        "friends.followings_count",
+        "games.user_created",
+        "games.user_favorites",
+        "inventory.can_view",
+        "users.profile",
+        "users.username_history"
+      ],
+      "model_version": "1.0.0-baseline+hgbt",
+      "feature_schema_version": "1.0.0"
+    },
+    {
+      "candidate_user_id": 684188965,
+      "candidate_username": "caroot_moisi",
+      "candidate_display_name": "Caroot_moisi",
+      "discovery_reasons": [
+        {
+          "strategy": "direct_friend",
+          "detail": "Direct public friend of target (Aldesmodeus)",
+          "source_endpoint": "https://friends.roblox.com/v1/users/1504805831/friends",
+          "prior_weight": 0.38
+        }
+      ],
+      "baseline_score": 0.1897,
+      "ml_score": null,
+      "combined_score": 0.1897,
+      "confidence_band": "Insufficient evidence",
+      "confidence_interpretation": "Publicly observable signals do not provide meaningful evidence of shared account operation.",
+      "threshold_status": "provisional",
+      "scoring_mode": "heuristic_baseline_primary",
+      "supporting_evidence": [
+        {
+          "signal_name": "social_graph_overlap",
+          "family": "social_graph",
+          "direction": "supporting",
+          "strength": "medium",
+          "value_summary": "direct_friend=True, mutual_friends=0 (containment=0.00)",
+          "explanation": "Direct public friends, sharing 0 mutual third-party friend(s) (containment 0.00).",
+          "contribution": 0.2
+        }
+      ],
+      "conflicting_evidence": [
+        {
+          "signal_name": "username_lexical_dissimilarity",
+          "family": "lexical_naming",
+          "direction": "against",
+          "strength": "low",
+          "value_summary": "core_lcs=0.00, display_sim=0.00",
+          "explanation": "No observable lexical stem overlap between 'Aldesmodeus' ('Aldes') and 'caroot_moisi' ('Caroot_moisi').",
+          "contribution": 0.0
+        }
+      ],
+      "missing_evidence": [
+        {
+          "signal_name": "group_jaccard",
+          "family": "group_structure",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'group_jaccard' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "rarity_weighted_group_sim",
+          "family": "group_structure",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'rarity_weighted_group_sim' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "small_group_co_membership_score",
+          "family": "group_structure",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'small_group_co_membership_score' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "shared_elevated_role_score",
+          "family": "group_structure",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'shared_elevated_role_score' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "mutual_friends_jaccard",
+          "family": "social_graph",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'mutual_friends_jaccard' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "mutual_friends_containment",
+          "family": "social_graph",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'mutual_friends_containment' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "description_similarity",
+          "family": "profile_avatar",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'description_similarity' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "avatar_asset_overlap",
+          "family": "profile_avatar",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'avatar_asset_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "avatar_style_similarity",
+          "family": "profile_avatar",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'avatar_style_similarity' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "favorite_games_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'favorite_games_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "created_games_similarity",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'created_games_similarity' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "inventory_asset_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'inventory_asset_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "activity_timestamp_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'activity_timestamp_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:avatar.details",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "Configured HTTP request budget (110) reached",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:badges.user_badges",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://badges.roblox.com/v1/users/{userId}/badges requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followers_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followers requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followings_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followings requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "Configured HTTP request budget (110) reached",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:groups.user_roles",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "Configured HTTP request budget (110) reached",
+          "contribution": 0.0
+        }
+      ],
+      "family_scores": {
+        "lexical_naming": 0.0,
+        "group_structure": 0.0,
+        "social_graph": 1.0,
+        "profile_avatar": 0.0,
+        "activity_games": 0.0,
+        "graph_topology": 0.4752
+      },
+      "feature_contributions": {
+        "username_char_ngram_sim": 0.0,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.0,
+        "shared_distinctive_affix_score": 0.0,
+        "is_direct_friend": 0.2,
+        "creation_burst_proximity": 0.0,
+        "graph_adamic_adar": 0.0112,
+        "graph_resource_allocation": 0.0093,
+        "graph_personalized_pagerank": 0.0022,
+        "graph_same_community": 0.0105
+      },
+      "raw_features": {
+        "username_char_ngram_sim": 0.0,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.0,
+        "shared_distinctive_affix_score": 0.0,
+        "group_jaccard": null,
+        "rarity_weighted_group_sim": null,
+        "small_group_co_membership_score": null,
+        "shared_elevated_role_score": null,
+        "is_direct_friend": 1.0,
+        "mutual_friends_jaccard": null,
+        "mutual_friends_containment": null,
+        "description_similarity": null,
+        "avatar_asset_overlap": null,
+        "avatar_style_similarity": null,
+        "creation_burst_proximity": 0.0,
+        "favorite_games_overlap": null,
+        "created_games_similarity": null,
+        "inventory_asset_overlap": null,
+        "activity_timestamp_overlap": null,
+        "graph_adamic_adar": 0.4586,
+        "graph_resource_allocation": 0.442,
+        "graph_personalized_pagerank": 0.1607,
+        "graph_same_community": 1.0
+      },
+      "graph_metrics": {
+        "graph_adamic_adar": 0.4586,
+        "graph_resource_allocation": 0.442,
+        "graph_personalized_pagerank": 0.1607,
+        "graph_same_community": 1.0
+      },
+      "unsupervised_signals": {
+        "isolation_forest_anomaly_score": 0.5587,
+        "lof_outlier_flag": 1.0,
+        "pairwise_signal_density": 0.3061,
+        "profile_archetype": "sparse_minimal_profile",
+        "note": "Unsupervised profile archetype is separate from linkage score; sparse/outlier profiles are not automatically alts."
+      },
+      "uncertainty_notes": [
+        "Public Roblox telemetry cannot observe IP addresses, hardware/device fingerprints, or authentication cookies; scores reflect behavioral/structural correlation, not proof of identity.",
+        "13 of 23 pairwise features were unavailable (e.g., empty profile descriptions, private inventories, or unpopulated game favorites)."
+      ],
+      "alternative_explanations": [
+        "Accounts may belong to independent players who happen to intersect in one or more public communities or friend circles."
+      ],
+      "data_sources": [
+        "friends.followers_count",
+        "friends.followings_count",
+        "games.user_created",
+        "games.user_favorites",
+        "inventory.can_view",
+        "users.profile",
+        "users.username_history"
+      ],
+      "model_version": "1.0.0-baseline+hgbt",
+      "feature_schema_version": "1.0.0"
+    },
+    {
+      "candidate_user_id": 89536296,
+      "candidate_username": "Geckoo_416",
+      "candidate_display_name": "Potato",
+      "discovery_reasons": [
+        {
+          "strategy": "direct_friend",
+          "detail": "Direct public friend of target (Aldesmodeus)",
+          "source_endpoint": "https://friends.roblox.com/v1/users/1504805831/friends",
+          "prior_weight": 0.38
+        }
+      ],
+      "baseline_score": 0.1689,
+      "ml_score": null,
+      "combined_score": 0.1689,
+      "confidence_band": "Insufficient evidence",
+      "confidence_interpretation": "Publicly observable signals do not provide meaningful evidence of shared account operation.",
+      "threshold_status": "provisional",
+      "scoring_mode": "heuristic_baseline_primary",
+      "supporting_evidence": [
+        {
+          "signal_name": "social_graph_overlap",
+          "family": "social_graph",
+          "direction": "supporting",
+          "strength": "high",
+          "value_summary": "direct_friend=True, mutual_friends=7 (containment=0.11)",
+          "explanation": "Direct public friends, sharing 7 mutual third-party friend(s) (containment 0.11).",
+          "contribution": 0.0933
+        },
+        {
+          "signal_name": "shared_distinctive_affix",
+          "family": "lexical_naming",
+          "direction": "supporting",
+          "strength": "medium",
+          "value_summary": "affix_score=0.65 (nums=['416'], words=[])",
+          "explanation": "Shared distinctive naming/group tokens: numbers=['416'], lexical tokens=none.",
+          "contribution": 0.0234
+        }
+      ],
+      "conflicting_evidence": [
+        {
+          "signal_name": "only_popular_groups_shared",
+          "family": "group_structure",
+          "direction": "against",
+          "strength": "medium",
+          "value_summary": "shared_groups=1 (all >2,500 members)",
+          "explanation": "Shared groups consist solely of large/popular communities with low discriminative value for identity linkage.",
+          "contribution": 0.0
+        }
+      ],
+      "missing_evidence": [
+        {
+          "signal_name": "description_similarity",
+          "family": "profile_avatar",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'description_similarity' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "inventory_asset_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'inventory_asset_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:badges.user_badges",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://badges.roblox.com/v1/users/{userId}/badges requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followers_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followers requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followings_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followings requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:inventory.can_view",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "Rate limit (HTTP 429) persisted on inventory.can_view after 1 attempts",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:users.username_history",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "Skipped due to active HTTP 429 flood-limit circuit breaker on users.username_history",
+          "contribution": 0.0
+        }
+      ],
+      "family_scores": {
+        "lexical_naming": 0.2096,
+        "group_structure": 0.003,
+        "social_graph": 0.4661,
+        "profile_avatar": 0.0,
+        "activity_games": 0.0212,
+        "graph_topology": 0.6847
+      },
+      "feature_contributions": {
+        "username_char_ngram_sim": 0.0257,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.0137,
+        "shared_distinctive_affix_score": 0.0234,
+        "group_jaccard": 0.0005,
+        "rarity_weighted_group_sim": 0.0004,
+        "small_group_co_membership_score": 0.0,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 0.084,
+        "mutual_friends_jaccard": 0.0016,
+        "mutual_friends_containment": 0.0077,
+        "avatar_asset_overlap": 0.0,
+        "avatar_style_similarity": 0.0,
+        "creation_burst_proximity": 0.0,
+        "favorite_games_overlap": 0.0011,
+        "created_games_similarity": 0.0,
+        "activity_timestamp_overlap": 0.0,
+        "graph_adamic_adar": 0.0212,
+        "graph_resource_allocation": 0.013,
+        "graph_personalized_pagerank": 0.0138,
+        "graph_same_community": 0.0
+      },
+      "raw_features": {
+        "username_char_ngram_sim": 0.286,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.286,
+        "shared_distinctive_affix_score": 0.65,
+        "group_jaccard": 0.0154,
+        "rarity_weighted_group_sim": 0.0049,
+        "small_group_co_membership_score": 0.0,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 1.0,
+        "mutual_friends_jaccard": 0.0338,
+        "mutual_friends_containment": 0.1094,
+        "description_similarity": null,
+        "avatar_asset_overlap": 0.0,
+        "avatar_style_similarity": 0.0,
+        "creation_burst_proximity": 0.0,
+        "favorite_games_overlap": 0.0377,
+        "created_games_similarity": 0.0,
+        "inventory_asset_overlap": null,
+        "activity_timestamp_overlap": 0.0,
+        "graph_adamic_adar": 0.8637,
+        "graph_resource_allocation": 0.6177,
+        "graph_personalized_pagerank": 0.9854,
+        "graph_same_community": 0.0
+      },
+      "graph_metrics": {
+        "graph_adamic_adar": 0.8637,
+        "graph_resource_allocation": 0.6177,
+        "graph_personalized_pagerank": 0.9854,
+        "graph_same_community": 0.0
+      },
+      "unsupervised_signals": {
+        "isolation_forest_anomaly_score": 0.5536,
+        "lof_outlier_flag": 0.0,
+        "pairwise_signal_density": 0.2329,
+        "profile_archetype": "standard_active_profile",
+        "note": "Unsupervised profile archetype is separate from linkage score; sparse/outlier profiles are not automatically alts."
+      },
+      "uncertainty_notes": [
+        "Public Roblox telemetry cannot observe IP addresses, hardware/device fingerprints, or authentication cookies; scores reflect behavioral/structural correlation, not proof of identity."
+      ],
+      "alternative_explanations": [
+        "Shared numeric suffixes (such as group/division numbers) or shared display-name prefixes are often adopted as uniform clan tags by multiple distinct group members."
+      ],
+      "data_sources": [
+        "friends.followers_count",
+        "friends.followings_count",
+        "games.user_created",
+        "games.user_favorites",
+        "inventory.can_view",
+        "users.profile",
+        "users.username_history"
+      ],
+      "model_version": "1.0.0-baseline+hgbt",
+      "feature_schema_version": "1.0.0"
+    },
+    {
+      "candidate_user_id": 1260610,
+      "candidate_username": "pika34",
+      "candidate_display_name": "pika34",
+      "discovery_reasons": [
+        {
+          "strategy": "direct_friend",
+          "detail": "Direct public friend of target (Aldesmodeus)",
+          "source_endpoint": "https://friends.roblox.com/v1/users/1504805831/friends",
+          "prior_weight": 0.38
+        }
+      ],
+      "baseline_score": 0.1359,
+      "ml_score": null,
+      "combined_score": 0.1359,
+      "confidence_band": "Insufficient evidence",
+      "confidence_interpretation": "Publicly observable signals do not provide meaningful evidence of shared account operation.",
+      "threshold_status": "provisional",
+      "scoring_mode": "heuristic_baseline_primary",
+      "supporting_evidence": [
+        {
+          "signal_name": "social_graph_overlap",
+          "family": "social_graph",
+          "direction": "supporting",
+          "strength": "high",
+          "value_summary": "direct_friend=True, mutual_friends=6 (containment=0.24)",
+          "explanation": "Direct public friends, sharing 6 mutual third-party friend(s) (containment 0.24).",
+          "contribution": 0.1041
+        }
+      ],
+      "conflicting_evidence": [
+        {
+          "signal_name": "username_lexical_dissimilarity",
+          "family": "lexical_naming",
+          "direction": "against",
+          "strength": "low",
+          "value_summary": "core_lcs=0.00, display_sim=0.11",
+          "explanation": "No observable lexical stem overlap between 'Aldesmodeus' ('Aldes') and 'pika34' ('pika34').",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "no_shared_groups",
+          "family": "group_structure",
+          "direction": "against",
+          "strength": "medium",
+          "value_summary": "target_groups=49, candidate_groups=6, overlap=0",
+          "explanation": "Both accounts have public group memberships (49 vs 6), but share zero groups in common.",
+          "contribution": 0.0
+        }
+      ],
+      "missing_evidence": [
+        {
+          "signal_name": "created_games_similarity",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'created_games_similarity' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "inventory_asset_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'inventory_asset_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "activity_timestamp_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'activity_timestamp_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:badges.user_badges",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://badges.roblox.com/v1/users/{userId}/badges requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followers_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followers requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followings_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followings requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:inventory.can_view",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "Rate limit (HTTP 429) persisted on inventory.can_view after 1 attempts",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:users.username_history",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "Rate limit (HTTP 429) persisted on users.username_history after 1 attempts",
+          "contribution": 0.0
+        }
+      ],
+      "family_scores": {
+        "lexical_naming": 0.0485,
+        "group_structure": 0.0,
+        "social_graph": 0.5206,
+        "profile_avatar": 0.0671,
+        "activity_games": 0.0,
+        "graph_topology": 0.5957
+      },
+      "feature_contributions": {
+        "username_char_ngram_sim": 0.0095,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.0051,
+        "shared_distinctive_affix_score": 0.0,
+        "group_jaccard": 0.0,
+        "rarity_weighted_group_sim": 0.0,
+        "small_group_co_membership_score": 0.0,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 0.084,
+        "mutual_friends_jaccard": 0.0033,
+        "mutual_friends_containment": 0.0168,
+        "description_similarity": 0.0,
+        "avatar_asset_overlap": 0.0012,
+        "avatar_style_similarity": 0.0042,
+        "creation_burst_proximity": 0.0,
+        "favorite_games_overlap": 0.0,
+        "graph_adamic_adar": 0.0201,
+        "graph_resource_allocation": 0.0126,
+        "graph_personalized_pagerank": 0.009,
+        "graph_same_community": 0.0
+      },
+      "raw_features": {
+        "username_char_ngram_sim": 0.1054,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.1054,
+        "shared_distinctive_affix_score": 0.0,
+        "group_jaccard": 0.0,
+        "rarity_weighted_group_sim": 0.0,
+        "small_group_co_membership_score": 0.0,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 1.0,
+        "mutual_friends_jaccard": 0.0723,
+        "mutual_friends_containment": 0.24,
+        "description_similarity": 0.0,
+        "avatar_asset_overlap": 0.0417,
+        "avatar_style_similarity": 0.35,
+        "creation_burst_proximity": 0.0,
+        "favorite_games_overlap": 0.0,
+        "created_games_similarity": null,
+        "inventory_asset_overlap": null,
+        "activity_timestamp_overlap": null,
+        "graph_adamic_adar": 0.8185,
+        "graph_resource_allocation": 0.6006,
+        "graph_personalized_pagerank": 0.6454,
+        "graph_same_community": 0.0
+      },
+      "graph_metrics": {
+        "graph_adamic_adar": 0.8185,
+        "graph_resource_allocation": 0.6006,
+        "graph_personalized_pagerank": 0.6454,
+        "graph_same_community": 0.0
+      },
+      "unsupervised_signals": {
+        "isolation_forest_anomaly_score": 0.5247,
+        "lof_outlier_flag": 0.0,
+        "pairwise_signal_density": 0.199,
+        "profile_archetype": "standard_active_profile",
+        "note": "Unsupervised profile archetype is separate from linkage score; sparse/outlier profiles are not automatically alts."
+      },
+      "uncertainty_notes": [
+        "Public Roblox telemetry cannot observe IP addresses, hardware/device fingerprints, or authentication cookies; scores reflect behavioral/structural correlation, not proof of identity."
+      ],
+      "alternative_explanations": [
+        "Accounts may belong to independent players who happen to intersect in one or more public communities or friend circles."
+      ],
+      "data_sources": [
+        "friends.followers_count",
+        "friends.followings_count",
+        "games.user_created",
+        "games.user_favorites",
+        "inventory.can_view",
+        "users.profile",
+        "users.username_history"
+      ],
+      "model_version": "1.0.0-baseline+hgbt",
+      "feature_schema_version": "1.0.0"
+    },
+    {
+      "candidate_user_id": 524230745,
+      "candidate_username": "noodlebutt13000",
+      "candidate_display_name": "bigJart",
+      "discovery_reasons": [
+        {
+          "strategy": "direct_friend",
+          "detail": "Direct public friend of target (Aldesmodeus)",
+          "source_endpoint": "https://friends.roblox.com/v1/users/1504805831/friends",
+          "prior_weight": 0.38
+        }
+      ],
+      "baseline_score": 0.1222,
+      "ml_score": null,
+      "combined_score": 0.1222,
+      "confidence_band": "Insufficient evidence",
+      "confidence_interpretation": "Publicly observable signals do not provide meaningful evidence of shared account operation.",
+      "threshold_status": "provisional",
+      "scoring_mode": "heuristic_baseline_primary",
+      "supporting_evidence": [
+        {
+          "signal_name": "social_graph_overlap",
+          "family": "social_graph",
+          "direction": "supporting",
+          "strength": "high",
+          "value_summary": "direct_friend=True, mutual_friends=6 (containment=0.09)",
+          "explanation": "Direct public friends, sharing 6 mutual third-party friend(s) (containment 0.09).",
+          "contribution": 0.0928
+        }
+      ],
+      "conflicting_evidence": [
+        {
+          "signal_name": "username_lexical_dissimilarity",
+          "family": "lexical_naming",
+          "direction": "against",
+          "strength": "low",
+          "value_summary": "core_lcs=0.00, display_sim=0.12",
+          "explanation": "No observable lexical stem overlap between 'Aldesmodeus' ('Aldes') and 'noodlebutt13000' ('bigJart').",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "only_popular_groups_shared",
+          "family": "group_structure",
+          "direction": "against",
+          "strength": "medium",
+          "value_summary": "shared_groups=3 (all >2,500 members)",
+          "explanation": "Shared groups consist solely of large/popular communities with low discriminative value for identity linkage.",
+          "contribution": 0.0
+        }
+      ],
+      "missing_evidence": [
+        {
+          "signal_name": "favorite_games_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'favorite_games_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "created_games_similarity",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'created_games_similarity' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "inventory_asset_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'inventory_asset_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "activity_timestamp_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'activity_timestamp_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:badges.user_badges",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://badges.roblox.com/v1/users/{userId}/badges requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followers_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followers requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followings_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followings requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        }
+      ],
+      "family_scores": {
+        "lexical_naming": 0.0191,
+        "group_structure": 0.0133,
+        "social_graph": 0.4639,
+        "profile_avatar": 0.0525,
+        "activity_games": 0.0,
+        "graph_topology": 0.6044
+      },
+      "feature_contributions": {
+        "username_char_ngram_sim": 0.0,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.0057,
+        "shared_distinctive_affix_score": 0.0,
+        "group_jaccard": 0.0013,
+        "rarity_weighted_group_sim": 0.0027,
+        "small_group_co_membership_score": 0.0,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 0.084,
+        "mutual_friends_jaccard": 0.0022,
+        "mutual_friends_containment": 0.0066,
+        "description_similarity": 0.0,
+        "avatar_asset_overlap": 0.0,
+        "avatar_style_similarity": 0.0042,
+        "creation_burst_proximity": 0.0,
+        "graph_adamic_adar": 0.0199,
+        "graph_resource_allocation": 0.0125,
+        "graph_personalized_pagerank": 0.0099,
+        "graph_same_community": 0.0
+      },
+      "raw_features": {
+        "username_char_ngram_sim": 0.0,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.1195,
+        "shared_distinctive_affix_score": 0.0,
+        "group_jaccard": 0.0417,
+        "rarity_weighted_group_sim": 0.0303,
+        "small_group_co_membership_score": 0.0,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 1.0,
+        "mutual_friends_jaccard": 0.048,
+        "mutual_friends_containment": 0.0938,
+        "description_similarity": 0.0,
+        "avatar_asset_overlap": 0.0,
+        "avatar_style_similarity": 0.35,
+        "creation_burst_proximity": 0.0,
+        "favorite_games_overlap": null,
+        "created_games_similarity": null,
+        "inventory_asset_overlap": null,
+        "activity_timestamp_overlap": null,
+        "graph_adamic_adar": 0.8123,
+        "graph_resource_allocation": 0.5974,
+        "graph_personalized_pagerank": 0.7045,
+        "graph_same_community": 0.0
+      },
+      "graph_metrics": {
+        "graph_adamic_adar": 0.8123,
+        "graph_resource_allocation": 0.5974,
+        "graph_personalized_pagerank": 0.7045,
+        "graph_same_community": 0.0
+      },
+      "unsupervised_signals": {
+        "isolation_forest_anomaly_score": 0.3931,
+        "lof_outlier_flag": 0.0,
+        "pairwise_signal_density": 0.1999,
+        "profile_archetype": "standard_active_profile",
+        "note": "Unsupervised profile archetype is separate from linkage score; sparse/outlier profiles are not automatically alts."
+      },
+      "uncertainty_notes": [
+        "Public Roblox telemetry cannot observe IP addresses, hardware/device fingerprints, or authentication cookies; scores reflect behavioral/structural correlation, not proof of identity."
+      ],
+      "alternative_explanations": [
+        "Accounts may belong to independent players who happen to intersect in one or more public communities or friend circles."
+      ],
+      "data_sources": [
+        "friends.followers_count",
+        "friends.followings_count",
+        "games.user_created",
+        "games.user_favorites",
+        "inventory.can_view",
+        "users.profile",
+        "users.username_history"
+      ],
+      "model_version": "1.0.0-baseline+hgbt",
+      "feature_schema_version": "1.0.0"
+    },
+    {
+      "candidate_user_id": 130345048,
+      "candidate_username": "DinosaurMasterGirls",
+      "candidate_display_name": "FiorsForge",
+      "discovery_reasons": [
+        {
+          "strategy": "direct_friend",
+          "detail": "Direct public friend of target (Aldesmodeus)",
+          "source_endpoint": "https://friends.roblox.com/v1/users/1504805831/friends",
+          "prior_weight": 0.38
+        }
+      ],
+      "baseline_score": 0.1173,
+      "ml_score": null,
+      "combined_score": 0.1173,
+      "confidence_band": "Insufficient evidence",
+      "confidence_interpretation": "Publicly observable signals do not provide meaningful evidence of shared account operation.",
+      "threshold_status": "provisional",
+      "scoring_mode": "heuristic_baseline_primary",
+      "supporting_evidence": [
+        {
+          "signal_name": "social_graph_overlap",
+          "family": "social_graph",
+          "direction": "supporting",
+          "strength": "high",
+          "value_summary": "direct_friend=True, mutual_friends=6 (containment=0.09)",
+          "explanation": "Direct public friends, sharing 6 mutual third-party friend(s) (containment 0.09).",
+          "contribution": 0.0925
+        }
+      ],
+      "conflicting_evidence": [
+        {
+          "signal_name": "username_lexical_dissimilarity",
+          "family": "lexical_naming",
+          "direction": "against",
+          "strength": "low",
+          "value_summary": "core_lcs=0.00, display_sim=0.00",
+          "explanation": "No observable lexical stem overlap between 'Aldesmodeus' ('Aldes') and 'DinosaurMasterGirls' ('FiorsForge').",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "only_popular_groups_shared",
+          "family": "group_structure",
+          "direction": "against",
+          "strength": "medium",
+          "value_summary": "shared_groups=3 (all >2,500 members)",
+          "explanation": "Shared groups consist solely of large/popular communities with low discriminative value for identity linkage.",
+          "contribution": 0.0
+        }
+      ],
+      "missing_evidence": [
+        {
+          "signal_name": "description_similarity",
+          "family": "profile_avatar",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'description_similarity' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "favorite_games_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'favorite_games_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "created_games_similarity",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'created_games_similarity' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "inventory_asset_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'inventory_asset_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "activity_timestamp_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'activity_timestamp_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:badges.user_badges",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://badges.roblox.com/v1/users/{userId}/badges requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followers_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followers requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followings_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followings requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        }
+      ],
+      "family_scores": {
+        "lexical_naming": 0.0,
+        "group_structure": 0.0135,
+        "social_graph": 0.4625,
+        "profile_avatar": 0.0808,
+        "activity_games": 0.0,
+        "graph_topology": 0.5721
+      },
+      "feature_contributions": {
+        "username_char_ngram_sim": 0.0,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.0,
+        "shared_distinctive_affix_score": 0.0,
+        "group_jaccard": 0.0016,
+        "rarity_weighted_group_sim": 0.0025,
+        "small_group_co_membership_score": 0.0,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 0.084,
+        "mutual_friends_jaccard": 0.0019,
+        "mutual_friends_containment": 0.0066,
+        "avatar_asset_overlap": 0.0,
+        "avatar_style_similarity": 0.0065,
+        "creation_burst_proximity": 0.0,
+        "graph_adamic_adar": 0.0202,
+        "graph_resource_allocation": 0.0118,
+        "graph_personalized_pagerank": 0.008,
+        "graph_same_community": 0.0
+      },
+      "raw_features": {
+        "username_char_ngram_sim": 0.0,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.0,
+        "shared_distinctive_affix_score": 0.0,
+        "group_jaccard": 0.0517,
+        "rarity_weighted_group_sim": 0.0277,
+        "small_group_co_membership_score": 0.0,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 1.0,
+        "mutual_friends_jaccard": 0.042,
+        "mutual_friends_containment": 0.0938,
+        "description_similarity": null,
+        "avatar_asset_overlap": 0.0,
+        "avatar_style_similarity": 0.35,
+        "creation_burst_proximity": 0.0,
+        "favorite_games_overlap": null,
+        "created_games_similarity": null,
+        "inventory_asset_overlap": null,
+        "activity_timestamp_overlap": null,
+        "graph_adamic_adar": 0.8259,
+        "graph_resource_allocation": 0.5606,
+        "graph_personalized_pagerank": 0.5741,
+        "graph_same_community": 0.0
+      },
+      "graph_metrics": {
+        "graph_adamic_adar": 0.8259,
+        "graph_resource_allocation": 0.5606,
+        "graph_personalized_pagerank": 0.5741,
+        "graph_same_community": 0.0
+      },
+      "unsupervised_signals": {
+        "isolation_forest_anomaly_score": 0.4395,
+        "lof_outlier_flag": 0.0,
+        "pairwise_signal_density": 0.1959,
+        "profile_archetype": "standard_active_profile",
+        "note": "Unsupervised profile archetype is separate from linkage score; sparse/outlier profiles are not automatically alts."
+      },
+      "uncertainty_notes": [
+        "Public Roblox telemetry cannot observe IP addresses, hardware/device fingerprints, or authentication cookies; scores reflect behavioral/structural correlation, not proof of identity.",
+        "5 of 23 pairwise features were unavailable (e.g., empty profile descriptions, private inventories, or unpopulated game favorites)."
+      ],
+      "alternative_explanations": [
+        "Accounts may belong to independent players who happen to intersect in one or more public communities or friend circles."
+      ],
+      "data_sources": [
+        "friends.followers_count",
+        "friends.followings_count",
+        "games.user_created",
+        "games.user_favorites",
+        "inventory.can_view",
+        "users.profile",
+        "users.username_history"
+      ],
+      "model_version": "1.0.0-baseline+hgbt",
+      "feature_schema_version": "1.0.0"
+    },
+    {
+      "candidate_user_id": 544432923,
+      "candidate_username": "unicornayun",
+      "candidate_display_name": "SqUiGgle",
+      "discovery_reasons": [
+        {
+          "strategy": "direct_friend",
+          "detail": "Direct public friend of target (Aldesmodeus)",
+          "source_endpoint": "https://friends.roblox.com/v1/users/1504805831/friends",
+          "prior_weight": 0.38
+        }
+      ],
+      "baseline_score": 0.1171,
+      "ml_score": null,
+      "combined_score": 0.1171,
+      "confidence_band": "Insufficient evidence",
+      "confidence_interpretation": "Publicly observable signals do not provide meaningful evidence of shared account operation.",
+      "threshold_status": "provisional",
+      "scoring_mode": "heuristic_baseline_primary",
+      "supporting_evidence": [
+        {
+          "signal_name": "social_graph_overlap",
+          "family": "social_graph",
+          "direction": "supporting",
+          "strength": "medium",
+          "value_summary": "direct_friend=True, mutual_friends=4 (containment=0.06)",
+          "explanation": "Direct public friends, sharing 4 mutual third-party friend(s) (containment 0.06).",
+          "contribution": 0.0896
+        }
+      ],
+      "conflicting_evidence": [
+        {
+          "signal_name": "username_lexical_dissimilarity",
+          "family": "lexical_naming",
+          "direction": "against",
+          "strength": "low",
+          "value_summary": "core_lcs=0.00, display_sim=0.00",
+          "explanation": "No observable lexical stem overlap between 'Aldesmodeus' ('Aldes') and 'unicornayun' ('SqUiGgle').",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "only_popular_groups_shared",
+          "family": "group_structure",
+          "direction": "against",
+          "strength": "medium",
+          "value_summary": "shared_groups=2 (all >2,500 members)",
+          "explanation": "Shared groups consist solely of large/popular communities with low discriminative value for identity linkage.",
+          "contribution": 0.0
+        }
+      ],
+      "missing_evidence": [
+        {
+          "signal_name": "favorite_games_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'favorite_games_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "created_games_similarity",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'created_games_similarity' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "inventory_asset_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'inventory_asset_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "activity_timestamp_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'activity_timestamp_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:badges.user_badges",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://badges.roblox.com/v1/users/{userId}/badges requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followers_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followers requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followings_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followings requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        }
+      ],
+      "family_scores": {
+        "lexical_naming": 0.0,
+        "group_structure": 0.0092,
+        "social_graph": 0.4477,
+        "profile_avatar": 0.0665,
+        "activity_games": 0.0,
+        "graph_topology": 0.6448
+      },
+      "feature_contributions": {
+        "username_char_ngram_sim": 0.0,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.0,
+        "shared_distinctive_affix_score": 0.0,
+        "group_jaccard": 0.0009,
+        "rarity_weighted_group_sim": 0.0019,
+        "small_group_co_membership_score": 0.0,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 0.084,
+        "mutual_friends_jaccard": 0.0012,
+        "mutual_friends_containment": 0.0044,
+        "description_similarity": 0.0,
+        "avatar_asset_overlap": 0.0011,
+        "avatar_style_similarity": 0.0042,
+        "creation_burst_proximity": 0.0,
+        "graph_adamic_adar": 0.0169,
+        "graph_resource_allocation": 0.0127,
+        "graph_personalized_pagerank": 0.005,
+        "graph_same_community": 0.0105
+      },
+      "raw_features": {
+        "username_char_ngram_sim": 0.0,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.0,
+        "shared_distinctive_affix_score": 0.0,
+        "group_jaccard": 0.029,
+        "rarity_weighted_group_sim": 0.0209,
+        "small_group_co_membership_score": 0.0,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 1.0,
+        "mutual_friends_jaccard": 0.0255,
+        "mutual_friends_containment": 0.0625,
+        "description_similarity": 0.0,
+        "avatar_asset_overlap": 0.04,
+        "avatar_style_similarity": 0.35,
+        "creation_burst_proximity": 0.0,
+        "favorite_games_overlap": null,
+        "created_games_similarity": null,
+        "inventory_asset_overlap": null,
+        "activity_timestamp_overlap": null,
+        "graph_adamic_adar": 0.6905,
+        "graph_resource_allocation": 0.6034,
+        "graph_personalized_pagerank": 0.3605,
+        "graph_same_community": 1.0
+      },
+      "graph_metrics": {
+        "graph_adamic_adar": 0.6905,
+        "graph_resource_allocation": 0.6034,
+        "graph_personalized_pagerank": 0.3605,
+        "graph_same_community": 1.0
+      },
+      "unsupervised_signals": {
+        "isolation_forest_anomaly_score": 0.4076,
+        "lof_outlier_flag": 0.0,
+        "pairwise_signal_density": 0.2201,
+        "profile_archetype": "standard_active_profile",
+        "note": "Unsupervised profile archetype is separate from linkage score; sparse/outlier profiles are not automatically alts."
+      },
+      "uncertainty_notes": [
+        "Public Roblox telemetry cannot observe IP addresses, hardware/device fingerprints, or authentication cookies; scores reflect behavioral/structural correlation, not proof of identity."
+      ],
+      "alternative_explanations": [
+        "Accounts may belong to independent players who happen to intersect in one or more public communities or friend circles."
+      ],
+      "data_sources": [
+        "friends.followers_count",
+        "friends.followings_count",
+        "games.user_created",
+        "games.user_favorites",
+        "inventory.can_view",
+        "users.profile",
+        "users.username_history"
+      ],
+      "model_version": "1.0.0-baseline+hgbt",
+      "feature_schema_version": "1.0.0"
+    },
+    {
+      "candidate_user_id": 159708565,
+      "candidate_username": "StarFireIce29",
+      "candidate_display_name": "StarFireIce29",
+      "discovery_reasons": [
+        {
+          "strategy": "direct_friend",
+          "detail": "Direct public friend of target (Aldesmodeus)",
+          "source_endpoint": "https://friends.roblox.com/v1/users/1504805831/friends",
+          "prior_weight": 0.38
+        }
+      ],
+      "baseline_score": 0.117,
+      "ml_score": null,
+      "combined_score": 0.117,
+      "confidence_band": "Insufficient evidence",
+      "confidence_interpretation": "Publicly observable signals do not provide meaningful evidence of shared account operation.",
+      "threshold_status": "provisional",
+      "scoring_mode": "heuristic_baseline_primary",
+      "supporting_evidence": [
+        {
+          "signal_name": "social_graph_overlap",
+          "family": "social_graph",
+          "direction": "supporting",
+          "strength": "high",
+          "value_summary": "direct_friend=True, mutual_friends=8 (containment=0.12)",
+          "explanation": "Direct public friends, sharing 8 mutual third-party friend(s) (containment 0.12).",
+          "contribution": 0.0951
+        }
+      ],
+      "conflicting_evidence": [
+        {
+          "signal_name": "username_lexical_dissimilarity",
+          "family": "lexical_naming",
+          "direction": "against",
+          "strength": "low",
+          "value_summary": "core_lcs=0.00, display_sim=0.00",
+          "explanation": "No observable lexical stem overlap between 'Aldesmodeus' ('Aldes') and 'StarFireIce29' ('StarFireIce29').",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "only_popular_groups_shared",
+          "family": "group_structure",
+          "direction": "against",
+          "strength": "medium",
+          "value_summary": "shared_groups=2 (all >2,500 members)",
+          "explanation": "Shared groups consist solely of large/popular communities with low discriminative value for identity linkage.",
+          "contribution": 0.0
+        }
+      ],
+      "missing_evidence": [
+        {
+          "signal_name": "description_similarity",
+          "family": "profile_avatar",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'description_similarity' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "favorite_games_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'favorite_games_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "created_games_similarity",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'created_games_similarity' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "inventory_asset_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'inventory_asset_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "activity_timestamp_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'activity_timestamp_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:badges.user_badges",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://badges.roblox.com/v1/users/{userId}/badges requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followers_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followers requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followings_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followings requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        }
+      ],
+      "family_scores": {
+        "lexical_naming": 0.0,
+        "group_structure": 0.0053,
+        "social_graph": 0.4756,
+        "profile_avatar": 0.0,
+        "activity_games": 0.0,
+        "graph_topology": 0.6575
+      },
+      "feature_contributions": {
+        "username_char_ngram_sim": 0.0,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.0,
+        "shared_distinctive_affix_score": 0.0,
+        "group_jaccard": 0.0009,
+        "rarity_weighted_group_sim": 0.0007,
+        "small_group_co_membership_score": 0.0,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 0.084,
+        "mutual_friends_jaccard": 0.0024,
+        "mutual_friends_containment": 0.0087,
+        "avatar_asset_overlap": 0.0,
+        "avatar_style_similarity": 0.0,
+        "creation_burst_proximity": 0.0,
+        "graph_adamic_adar": 0.0203,
+        "graph_resource_allocation": 0.013,
+        "graph_personalized_pagerank": 0.0127,
+        "graph_same_community": 0.0
+      },
+      "raw_features": {
+        "username_char_ngram_sim": 0.0,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.0,
+        "shared_distinctive_affix_score": 0.0,
+        "group_jaccard": 0.029,
+        "rarity_weighted_group_sim": 0.0081,
+        "small_group_co_membership_score": 0.0,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 1.0,
+        "mutual_friends_jaccard": 0.0516,
+        "mutual_friends_containment": 0.125,
+        "description_similarity": null,
+        "avatar_asset_overlap": 0.0,
+        "avatar_style_similarity": 0.0,
+        "creation_burst_proximity": 0.0,
+        "favorite_games_overlap": null,
+        "created_games_similarity": null,
+        "inventory_asset_overlap": null,
+        "activity_timestamp_overlap": null,
+        "graph_adamic_adar": 0.8292,
+        "graph_resource_allocation": 0.6192,
+        "graph_personalized_pagerank": 0.9075,
+        "graph_same_community": 0.0
+      },
+      "graph_metrics": {
+        "graph_adamic_adar": 0.8292,
+        "graph_resource_allocation": 0.6192,
+        "graph_personalized_pagerank": 0.9075,
+        "graph_same_community": 0.0
+      },
+      "unsupervised_signals": {
+        "isolation_forest_anomaly_score": 0.441,
+        "lof_outlier_flag": 0.0,
+        "pairwise_signal_density": 0.1983,
+        "profile_archetype": "standard_active_profile",
+        "note": "Unsupervised profile archetype is separate from linkage score; sparse/outlier profiles are not automatically alts."
+      },
+      "uncertainty_notes": [
+        "Public Roblox telemetry cannot observe IP addresses, hardware/device fingerprints, or authentication cookies; scores reflect behavioral/structural correlation, not proof of identity.",
+        "5 of 23 pairwise features were unavailable (e.g., empty profile descriptions, private inventories, or unpopulated game favorites)."
+      ],
+      "alternative_explanations": [
+        "Accounts may belong to independent players who happen to intersect in one or more public communities or friend circles."
+      ],
+      "data_sources": [
+        "friends.followers_count",
+        "friends.followings_count",
+        "games.user_created",
+        "games.user_favorites",
+        "inventory.can_view",
+        "users.profile",
+        "users.username_history"
+      ],
+      "model_version": "1.0.0-baseline+hgbt",
+      "feature_schema_version": "1.0.0"
+    },
+    {
+      "candidate_user_id": 40997051,
+      "candidate_username": "dinomite161",
+      "candidate_display_name": "ダイノマイト",
+      "discovery_reasons": [
+        {
+          "strategy": "direct_friend",
+          "detail": "Direct public friend of target (Aldesmodeus)",
+          "source_endpoint": "https://friends.roblox.com/v1/users/1504805831/friends",
+          "prior_weight": 0.38
+        }
+      ],
+      "baseline_score": 0.1169,
+      "ml_score": null,
+      "combined_score": 0.1169,
+      "confidence_band": "Insufficient evidence",
+      "confidence_interpretation": "Publicly observable signals do not provide meaningful evidence of shared account operation.",
+      "threshold_status": "provisional",
+      "scoring_mode": "heuristic_baseline_primary",
+      "supporting_evidence": [
+        {
+          "signal_name": "social_graph_overlap",
+          "family": "social_graph",
+          "direction": "supporting",
+          "strength": "medium",
+          "value_summary": "direct_friend=True, mutual_friends=2 (containment=0.03)",
+          "explanation": "Direct public friends, sharing 2 mutual third-party friend(s) (containment 0.03).",
+          "contribution": 0.0869
+        }
+      ],
+      "conflicting_evidence": [
+        {
+          "signal_name": "username_lexical_dissimilarity",
+          "family": "lexical_naming",
+          "direction": "against",
+          "strength": "low",
+          "value_summary": "core_lcs=0.00, display_sim=0.00",
+          "explanation": "No observable lexical stem overlap between 'Aldesmodeus' ('Aldes') and 'dinomite161' ('ダイノマイト').",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "only_popular_groups_shared",
+          "family": "group_structure",
+          "direction": "against",
+          "strength": "medium",
+          "value_summary": "shared_groups=7 (all >2,500 members)",
+          "explanation": "Shared groups consist solely of large/popular communities with low discriminative value for identity linkage.",
+          "contribution": 0.0
+        }
+      ],
+      "missing_evidence": [
+        {
+          "signal_name": "created_games_similarity",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'created_games_similarity' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "inventory_asset_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'inventory_asset_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "activity_timestamp_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'activity_timestamp_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:badges.user_badges",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://badges.roblox.com/v1/users/{userId}/badges requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followers_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followers requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followings_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followings requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:inventory.can_view",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "Rate limit (HTTP 429) persisted on inventory.can_view after 1 attempts",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:users.username_history",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "Skipped due to active HTTP 429 flood-limit circuit breaker on users.username_history",
+          "contribution": 0.0
+        }
+      ],
+      "family_scores": {
+        "lexical_naming": 0.0,
+        "group_structure": 0.0126,
+        "social_graph": 0.4343,
+        "profile_avatar": 0.0525,
+        "activity_games": 0.0395,
+        "graph_topology": 0.6531
+      },
+      "feature_contributions": {
+        "username_char_ngram_sim": 0.0,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.0,
+        "shared_distinctive_affix_score": 0.0,
+        "group_jaccard": 0.0015,
+        "rarity_weighted_group_sim": 0.0023,
+        "small_group_co_membership_score": 0.0,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 0.084,
+        "mutual_friends_jaccard": 0.0007,
+        "mutual_friends_containment": 0.0022,
+        "description_similarity": 0.0,
+        "avatar_asset_overlap": 0.0,
+        "avatar_style_similarity": 0.0042,
+        "creation_burst_proximity": 0.0,
+        "favorite_games_overlap": 0.002,
+        "graph_adamic_adar": 0.0166,
+        "graph_resource_allocation": 0.0125,
+        "graph_personalized_pagerank": 0.0061,
+        "graph_same_community": 0.0105
+      },
+      "raw_features": {
+        "username_char_ngram_sim": 0.0,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.0,
+        "shared_distinctive_affix_score": 0.0,
+        "group_jaccard": 0.0493,
+        "rarity_weighted_group_sim": 0.0257,
+        "small_group_co_membership_score": 0.0,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 1.0,
+        "mutual_friends_jaccard": 0.0147,
+        "mutual_friends_containment": 0.0312,
+        "description_similarity": 0.0,
+        "avatar_asset_overlap": 0.0,
+        "avatar_style_similarity": 0.35,
+        "creation_burst_proximity": 0.0,
+        "favorite_games_overlap": 0.0395,
+        "created_games_similarity": null,
+        "inventory_asset_overlap": null,
+        "activity_timestamp_overlap": null,
+        "graph_adamic_adar": 0.6787,
+        "graph_resource_allocation": 0.5967,
+        "graph_personalized_pagerank": 0.4327,
+        "graph_same_community": 1.0
+      },
+      "graph_metrics": {
+        "graph_adamic_adar": 0.6787,
+        "graph_resource_allocation": 0.5967,
+        "graph_personalized_pagerank": 0.4327,
+        "graph_same_community": 1.0
+      },
+      "unsupervised_signals": {
+        "isolation_forest_anomaly_score": 0.5695,
+        "lof_outlier_flag": 0.0,
+        "pairwise_signal_density": 0.2109,
+        "profile_archetype": "standard_active_profile",
+        "note": "Unsupervised profile archetype is separate from linkage score; sparse/outlier profiles are not automatically alts."
+      },
+      "uncertainty_notes": [
+        "Public Roblox telemetry cannot observe IP addresses, hardware/device fingerprints, or authentication cookies; scores reflect behavioral/structural correlation, not proof of identity."
+      ],
+      "alternative_explanations": [
+        "Accounts may belong to independent players who happen to intersect in one or more public communities or friend circles."
+      ],
+      "data_sources": [
+        "friends.followers_count",
+        "friends.followings_count",
+        "games.user_created",
+        "games.user_favorites",
+        "inventory.can_view",
+        "users.profile",
+        "users.username_history"
+      ],
+      "model_version": "1.0.0-baseline+hgbt",
+      "feature_schema_version": "1.0.0"
+    },
+    {
+      "candidate_user_id": 379831915,
+      "candidate_username": "Skyattack397",
+      "candidate_display_name": "cekaye",
+      "discovery_reasons": [
+        {
+          "strategy": "direct_friend",
+          "detail": "Direct public friend of target (Aldesmodeus)",
+          "source_endpoint": "https://friends.roblox.com/v1/users/1504805831/friends",
+          "prior_weight": 0.38
+        }
+      ],
+      "baseline_score": 0.1159,
+      "ml_score": null,
+      "combined_score": 0.1159,
+      "confidence_band": "Insufficient evidence",
+      "confidence_interpretation": "Publicly observable signals do not provide meaningful evidence of shared account operation.",
+      "threshold_status": "provisional",
+      "scoring_mode": "heuristic_baseline_primary",
+      "supporting_evidence": [
+        {
+          "signal_name": "social_graph_overlap",
+          "family": "social_graph",
+          "direction": "supporting",
+          "strength": "high",
+          "value_summary": "direct_friend=True, mutual_friends=7 (containment=0.11)",
+          "explanation": "Direct public friends, sharing 7 mutual third-party friend(s) (containment 0.11).",
+          "contribution": 0.0932
+        }
+      ],
+      "conflicting_evidence": [
+        {
+          "signal_name": "username_lexical_dissimilarity",
+          "family": "lexical_naming",
+          "direction": "against",
+          "strength": "low",
+          "value_summary": "core_lcs=0.00, display_sim=0.00",
+          "explanation": "No observable lexical stem overlap between 'Aldesmodeus' ('Aldes') and 'Skyattack397' ('cekaye').",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "only_popular_groups_shared",
+          "family": "group_structure",
+          "direction": "against",
+          "strength": "medium",
+          "value_summary": "shared_groups=5 (all >2,500 members)",
+          "explanation": "Shared groups consist solely of large/popular communities with low discriminative value for identity linkage.",
+          "contribution": 0.0
+        }
+      ],
+      "missing_evidence": [
+        {
+          "signal_name": "favorite_games_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'favorite_games_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "created_games_similarity",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'created_games_similarity' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "inventory_asset_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'inventory_asset_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "activity_timestamp_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'activity_timestamp_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:badges.user_badges",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://badges.roblox.com/v1/users/{userId}/badges requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followers_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followers requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followings_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followings requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        }
+      ],
+      "family_scores": {
+        "lexical_naming": 0.0,
+        "group_structure": 0.0117,
+        "social_graph": 0.4659,
+        "profile_avatar": 0.0068,
+        "activity_games": 0.0,
+        "graph_topology": 0.63
+      },
+      "feature_contributions": {
+        "username_char_ngram_sim": 0.0,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.0,
+        "shared_distinctive_affix_score": 0.0,
+        "group_jaccard": 0.0011,
+        "rarity_weighted_group_sim": 0.0024,
+        "small_group_co_membership_score": 0.0,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 0.084,
+        "mutual_friends_jaccard": 0.0015,
+        "mutual_friends_containment": 0.0077,
+        "description_similarity": 0.0005,
+        "avatar_asset_overlap": 0.0,
+        "avatar_style_similarity": 0.0,
+        "creation_burst_proximity": 0.0,
+        "graph_adamic_adar": 0.0193,
+        "graph_resource_allocation": 0.0133,
+        "graph_personalized_pagerank": 0.0115,
+        "graph_same_community": 0.0
+      },
+      "raw_features": {
+        "username_char_ngram_sim": 0.0,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.0,
+        "shared_distinctive_affix_score": 0.0,
+        "group_jaccard": 0.0368,
+        "rarity_weighted_group_sim": 0.0268,
+        "small_group_co_membership_score": 0.0,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 1.0,
+        "mutual_friends_jaccard": 0.0332,
+        "mutual_friends_containment": 0.1094,
+        "description_similarity": 0.0193,
+        "avatar_asset_overlap": 0.0,
+        "avatar_style_similarity": 0.0,
+        "creation_burst_proximity": 0.0,
+        "favorite_games_overlap": null,
+        "created_games_similarity": null,
+        "inventory_asset_overlap": null,
+        "activity_timestamp_overlap": null,
+        "graph_adamic_adar": 0.7888,
+        "graph_resource_allocation": 0.6319,
+        "graph_personalized_pagerank": 0.8217,
+        "graph_same_community": 0.0
+      },
+      "graph_metrics": {
+        "graph_adamic_adar": 0.7888,
+        "graph_resource_allocation": 0.6319,
+        "graph_personalized_pagerank": 0.8217,
+        "graph_same_community": 0.0
+      },
+      "unsupervised_signals": {
+        "isolation_forest_anomaly_score": 0.4241,
+        "lof_outlier_flag": 0.0,
+        "pairwise_signal_density": 0.1825,
+        "profile_archetype": "standard_active_profile",
+        "note": "Unsupervised profile archetype is separate from linkage score; sparse/outlier profiles are not automatically alts."
+      },
+      "uncertainty_notes": [
+        "Public Roblox telemetry cannot observe IP addresses, hardware/device fingerprints, or authentication cookies; scores reflect behavioral/structural correlation, not proof of identity."
+      ],
+      "alternative_explanations": [
+        "Accounts may belong to independent players who happen to intersect in one or more public communities or friend circles."
+      ],
+      "data_sources": [
+        "friends.followers_count",
+        "friends.followings_count",
+        "games.user_created",
+        "games.user_favorites",
+        "inventory.can_view",
+        "users.profile",
+        "users.username_history"
+      ],
+      "model_version": "1.0.0-baseline+hgbt",
+      "feature_schema_version": "1.0.0"
+    },
+    {
+      "candidate_user_id": 448085046,
+      "candidate_username": "max_mllg",
+      "candidate_display_name": "Eve",
+      "discovery_reasons": [
+        {
+          "strategy": "direct_friend",
+          "detail": "Direct public friend of target (Aldesmodeus)",
+          "source_endpoint": "https://friends.roblox.com/v1/users/1504805831/friends",
+          "prior_weight": 0.38
+        }
+      ],
+      "baseline_score": 0.1139,
+      "ml_score": null,
+      "combined_score": 0.1139,
+      "confidence_band": "Insufficient evidence",
+      "confidence_interpretation": "Publicly observable signals do not provide meaningful evidence of shared account operation.",
+      "threshold_status": "provisional",
+      "scoring_mode": "heuristic_baseline_primary",
+      "supporting_evidence": [
+        {
+          "signal_name": "social_graph_overlap",
+          "family": "social_graph",
+          "direction": "supporting",
+          "strength": "high",
+          "value_summary": "direct_friend=True, mutual_friends=6 (containment=0.09)",
+          "explanation": "Direct public friends, sharing 6 mutual third-party friend(s) (containment 0.09).",
+          "contribution": 0.0917
+        }
+      ],
+      "conflicting_evidence": [
+        {
+          "signal_name": "username_lexical_dissimilarity",
+          "family": "lexical_naming",
+          "direction": "against",
+          "strength": "low",
+          "value_summary": "core_lcs=0.00, display_sim=0.00",
+          "explanation": "No observable lexical stem overlap between 'Aldesmodeus' ('Aldes') and 'max_mllg' ('Eve').",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "only_popular_groups_shared",
+          "family": "group_structure",
+          "direction": "against",
+          "strength": "medium",
+          "value_summary": "shared_groups=5 (all >2,500 members)",
+          "explanation": "Shared groups consist solely of large/popular communities with low discriminative value for identity linkage.",
+          "contribution": 0.0
+        }
+      ],
+      "missing_evidence": [
+        {
+          "signal_name": "favorite_games_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'favorite_games_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "created_games_similarity",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'created_games_similarity' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "inventory_asset_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'inventory_asset_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "activity_timestamp_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'activity_timestamp_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:badges.user_badges",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://badges.roblox.com/v1/users/{userId}/badges requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followers_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followers requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followings_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followings requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        }
+      ],
+      "family_scores": {
+        "lexical_naming": 0.0,
+        "group_structure": 0.0105,
+        "social_graph": 0.4583,
+        "profile_avatar": 0.0525,
+        "activity_games": 0.0,
+        "graph_topology": 0.5704
+      },
+      "feature_contributions": {
+        "username_char_ngram_sim": 0.0,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.0,
+        "shared_distinctive_affix_score": 0.0,
+        "group_jaccard": 0.0015,
+        "rarity_weighted_group_sim": 0.0017,
+        "small_group_co_membership_score": 0.0,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 0.084,
+        "mutual_friends_jaccard": 0.0011,
+        "mutual_friends_containment": 0.0066,
+        "description_similarity": 0.0,
+        "avatar_asset_overlap": 0.0,
+        "avatar_style_similarity": 0.0042,
+        "creation_burst_proximity": 0.0,
+        "graph_adamic_adar": 0.0196,
+        "graph_resource_allocation": 0.0121,
+        "graph_personalized_pagerank": 0.0083,
+        "graph_same_community": 0.0
+      },
+      "raw_features": {
+        "username_char_ngram_sim": 0.0,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.0,
+        "shared_distinctive_affix_score": 0.0,
+        "group_jaccard": 0.0495,
+        "rarity_weighted_group_sim": 0.0185,
+        "small_group_co_membership_score": 0.0,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 1.0,
+        "mutual_friends_jaccard": 0.0236,
+        "mutual_friends_containment": 0.0938,
+        "description_similarity": 0.0,
+        "avatar_asset_overlap": 0.0,
+        "avatar_style_similarity": 0.35,
+        "creation_burst_proximity": 0.0,
+        "favorite_games_overlap": null,
+        "created_games_similarity": null,
+        "inventory_asset_overlap": null,
+        "activity_timestamp_overlap": null,
+        "graph_adamic_adar": 0.8002,
+        "graph_resource_allocation": 0.5743,
+        "graph_personalized_pagerank": 0.5903,
+        "graph_same_community": 0.0
+      },
+      "graph_metrics": {
+        "graph_adamic_adar": 0.8002,
+        "graph_resource_allocation": 0.5743,
+        "graph_personalized_pagerank": 0.5903,
+        "graph_same_community": 0.0
+      },
+      "unsupervised_signals": {
+        "isolation_forest_anomaly_score": 0.4528,
+        "lof_outlier_flag": 0.0,
+        "pairwise_signal_density": 0.1842,
+        "profile_archetype": "standard_active_profile",
+        "note": "Unsupervised profile archetype is separate from linkage score; sparse/outlier profiles are not automatically alts."
+      },
+      "uncertainty_notes": [
+        "Public Roblox telemetry cannot observe IP addresses, hardware/device fingerprints, or authentication cookies; scores reflect behavioral/structural correlation, not proof of identity."
+      ],
+      "alternative_explanations": [
+        "Accounts may belong to independent players who happen to intersect in one or more public communities or friend circles."
+      ],
+      "data_sources": [
+        "friends.followers_count",
+        "friends.followings_count",
+        "games.user_created",
+        "games.user_favorites",
+        "inventory.can_view",
+        "users.profile",
+        "users.username_history"
+      ],
+      "model_version": "1.0.0-baseline+hgbt",
+      "feature_schema_version": "1.0.0"
+    },
+    {
+      "candidate_user_id": 112077440,
+      "candidate_username": "AIexaSkye",
+      "candidate_display_name": "Alexa",
+      "discovery_reasons": [
+        {
+          "strategy": "direct_friend",
+          "detail": "Direct public friend of target (Aldesmodeus)",
+          "source_endpoint": "https://friends.roblox.com/v1/users/1504805831/friends",
+          "prior_weight": 0.38
+        }
+      ],
+      "baseline_score": 0.1133,
+      "ml_score": null,
+      "combined_score": 0.1133,
+      "confidence_band": "Insufficient evidence",
+      "confidence_interpretation": "Publicly observable signals do not provide meaningful evidence of shared account operation.",
+      "threshold_status": "provisional",
+      "scoring_mode": "heuristic_baseline_primary",
+      "supporting_evidence": [
+        {
+          "signal_name": "social_graph_overlap",
+          "family": "social_graph",
+          "direction": "supporting",
+          "strength": "medium",
+          "value_summary": "direct_friend=True, mutual_friends=1 (containment=0.02)",
+          "explanation": "Direct public friends, sharing 1 mutual third-party friend(s) (containment 0.02).",
+          "contribution": 0.0854
+        }
+      ],
+      "conflicting_evidence": [
+        {
+          "signal_name": "only_popular_groups_shared",
+          "family": "group_structure",
+          "direction": "against",
+          "strength": "medium",
+          "value_summary": "shared_groups=2 (all >2,500 members)",
+          "explanation": "Shared groups consist solely of large/popular communities with low discriminative value for identity linkage.",
+          "contribution": 0.0
+        }
+      ],
+      "missing_evidence": [
+        {
+          "signal_name": "created_games_similarity",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'created_games_similarity' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "inventory_asset_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'inventory_asset_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "activity_timestamp_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'activity_timestamp_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:badges.user_badges",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://badges.roblox.com/v1/users/{userId}/badges requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followers_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followers requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followings_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followings requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:inventory.can_view",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "Skipped due to active HTTP 429 flood-limit circuit breaker on inventory.can_view",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:users.username_history",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "Skipped due to active HTTP 429 flood-limit circuit breaker on users.username_history",
+          "contribution": 0.0
+        }
+      ],
+      "family_scores": {
+        "lexical_naming": 0.032,
+        "group_structure": 0.0082,
+        "social_graph": 0.4268,
+        "profile_avatar": 0.0125,
+        "activity_games": 0.0185,
+        "graph_topology": 0.555
+      },
+      "feature_contributions": {
+        "username_char_ngram_sim": 0.0,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.0096,
+        "shared_distinctive_affix_score": 0.0,
+        "group_jaccard": 0.001,
+        "rarity_weighted_group_sim": 0.0014,
+        "small_group_co_membership_score": 0.0,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 0.084,
+        "mutual_friends_jaccard": 0.0003,
+        "mutual_friends_containment": 0.0011,
+        "description_similarity": 0.0,
+        "avatar_asset_overlap": 0.001,
+        "avatar_style_similarity": 0.0,
+        "creation_burst_proximity": 0.0,
+        "favorite_games_overlap": 0.0009,
+        "graph_adamic_adar": 0.0137,
+        "graph_resource_allocation": 0.0104,
+        "graph_personalized_pagerank": 0.0043,
+        "graph_same_community": 0.0105
+      },
+      "raw_features": {
+        "username_char_ngram_sim": 0.0,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.2,
+        "shared_distinctive_affix_score": 0.0,
+        "group_jaccard": 0.0339,
+        "rarity_weighted_group_sim": 0.0159,
+        "small_group_co_membership_score": 0.0,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 1.0,
+        "mutual_friends_jaccard": 0.0058,
+        "mutual_friends_containment": 0.0156,
+        "description_similarity": 0.0,
+        "avatar_asset_overlap": 0.0357,
+        "avatar_style_similarity": 0.0,
+        "creation_burst_proximity": 0.0,
+        "favorite_games_overlap": 0.0185,
+        "created_games_similarity": null,
+        "inventory_asset_overlap": null,
+        "activity_timestamp_overlap": null,
+        "graph_adamic_adar": 0.56,
+        "graph_resource_allocation": 0.4938,
+        "graph_personalized_pagerank": 0.3044,
+        "graph_same_community": 1.0
+      },
+      "graph_metrics": {
+        "graph_adamic_adar": 0.56,
+        "graph_resource_allocation": 0.4938,
+        "graph_personalized_pagerank": 0.3044,
+        "graph_same_community": 1.0
+      },
+      "unsupervised_signals": {
+        "isolation_forest_anomaly_score": 0.4724,
+        "lof_outlier_flag": 0.0,
+        "pairwise_signal_density": 0.1842,
+        "profile_archetype": "standard_active_profile",
+        "note": "Unsupervised profile archetype is separate from linkage score; sparse/outlier profiles are not automatically alts."
+      },
+      "uncertainty_notes": [
+        "Public Roblox telemetry cannot observe IP addresses, hardware/device fingerprints, or authentication cookies; scores reflect behavioral/structural correlation, not proof of identity."
+      ],
+      "alternative_explanations": [
+        "Accounts may belong to independent players who happen to intersect in one or more public communities or friend circles."
+      ],
+      "data_sources": [
+        "friends.followers_count",
+        "friends.followings_count",
+        "games.user_created",
+        "games.user_favorites",
+        "inventory.can_view",
+        "users.profile",
+        "users.username_history"
+      ],
+      "model_version": "1.0.0-baseline+hgbt",
+      "feature_schema_version": "1.0.0"
+    },
+    {
+      "candidate_user_id": 125375513,
+      "candidate_username": "LOLAzza21",
+      "candidate_display_name": "Zajim",
+      "discovery_reasons": [
+        {
+          "strategy": "direct_friend",
+          "detail": "Direct public friend of target (Aldesmodeus)",
+          "source_endpoint": "https://friends.roblox.com/v1/users/1504805831/friends",
+          "prior_weight": 0.38
+        }
+      ],
+      "baseline_score": 0.1103,
+      "ml_score": null,
+      "combined_score": 0.1103,
+      "confidence_band": "Insufficient evidence",
+      "confidence_interpretation": "Publicly observable signals do not provide meaningful evidence of shared account operation.",
+      "threshold_status": "provisional",
+      "scoring_mode": "heuristic_baseline_primary",
+      "supporting_evidence": [
+        {
+          "signal_name": "social_graph_overlap",
+          "family": "social_graph",
+          "direction": "supporting",
+          "strength": "medium",
+          "value_summary": "direct_friend=True, mutual_friends=1 (containment=0.02)",
+          "explanation": "Direct public friends, sharing 1 mutual third-party friend(s) (containment 0.02).",
+          "contribution": 0.0853
+        }
+      ],
+      "conflicting_evidence": [
+        {
+          "signal_name": "username_lexical_dissimilarity",
+          "family": "lexical_naming",
+          "direction": "against",
+          "strength": "low",
+          "value_summary": "core_lcs=0.00, display_sim=0.00",
+          "explanation": "No observable lexical stem overlap between 'Aldesmodeus' ('Aldes') and 'LOLAzza21' ('Zajim').",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "only_popular_groups_shared",
+          "family": "group_structure",
+          "direction": "against",
+          "strength": "medium",
+          "value_summary": "shared_groups=7 (all >2,500 members)",
+          "explanation": "Shared groups consist solely of large/popular communities with low discriminative value for identity linkage.",
+          "contribution": 0.0
+        }
+      ],
+      "missing_evidence": [
+        {
+          "signal_name": "favorite_games_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'favorite_games_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "created_games_similarity",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'created_games_similarity' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "inventory_asset_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'inventory_asset_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "activity_timestamp_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'activity_timestamp_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:badges.user_badges",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://badges.roblox.com/v1/users/{userId}/badges requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followers_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followers requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followings_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followings requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        }
+      ],
+      "family_scores": {
+        "lexical_naming": 0.0,
+        "group_structure": 0.0132,
+        "social_graph": 0.4264,
+        "profile_avatar": 0.0931,
+        "activity_games": 0.0,
+        "graph_topology": 0.5408
+      },
+      "feature_contributions": {
+        "username_char_ngram_sim": 0.0,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.0,
+        "shared_distinctive_affix_score": 0.0,
+        "group_jaccard": 0.0014,
+        "rarity_weighted_group_sim": 0.0026,
+        "small_group_co_membership_score": 0.0,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 0.084,
+        "mutual_friends_jaccard": 0.0002,
+        "mutual_friends_containment": 0.0011,
+        "description_similarity": 0.0008,
+        "avatar_asset_overlap": 0.0024,
+        "avatar_style_similarity": 0.0042,
+        "creation_burst_proximity": 0.0,
+        "graph_adamic_adar": 0.0134,
+        "graph_resource_allocation": 0.0102,
+        "graph_personalized_pagerank": 0.0038,
+        "graph_same_community": 0.0105
+      },
+      "raw_features": {
+        "username_char_ngram_sim": 0.0,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.0,
+        "shared_distinctive_affix_score": 0.0,
+        "group_jaccard": 0.0467,
+        "rarity_weighted_group_sim": 0.0286,
+        "small_group_co_membership_score": 0.0,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 1.0,
+        "mutual_friends_jaccard": 0.0039,
+        "mutual_friends_containment": 0.0156,
+        "description_similarity": 0.029,
+        "avatar_asset_overlap": 0.087,
+        "avatar_style_similarity": 0.35,
+        "creation_burst_proximity": 0.0,
+        "favorite_games_overlap": null,
+        "created_games_similarity": null,
+        "inventory_asset_overlap": null,
+        "activity_timestamp_overlap": null,
+        "graph_adamic_adar": 0.546,
+        "graph_resource_allocation": 0.4863,
+        "graph_personalized_pagerank": 0.2689,
+        "graph_same_community": 1.0
+      },
+      "graph_metrics": {
+        "graph_adamic_adar": 0.546,
+        "graph_resource_allocation": 0.4863,
+        "graph_personalized_pagerank": 0.2689,
+        "graph_same_community": 1.0
+      },
+      "unsupervised_signals": {
+        "isolation_forest_anomaly_score": 0.4284,
+        "lof_outlier_flag": 0.0,
+        "pairwise_signal_density": 0.2033,
+        "profile_archetype": "standard_active_profile",
+        "note": "Unsupervised profile archetype is separate from linkage score; sparse/outlier profiles are not automatically alts."
+      },
+      "uncertainty_notes": [
+        "Public Roblox telemetry cannot observe IP addresses, hardware/device fingerprints, or authentication cookies; scores reflect behavioral/structural correlation, not proof of identity."
+      ],
+      "alternative_explanations": [
+        "Accounts may belong to independent players who happen to intersect in one or more public communities or friend circles."
+      ],
+      "data_sources": [
+        "friends.followers_count",
+        "friends.followings_count",
+        "games.user_created",
+        "games.user_favorites",
+        "inventory.can_view",
+        "users.profile",
+        "users.username_history"
+      ],
+      "model_version": "1.0.0-baseline+hgbt",
+      "feature_schema_version": "1.0.0"
+    },
+    {
+      "candidate_user_id": 120856564,
+      "candidate_username": "G4M3SPY",
+      "candidate_display_name": "G4M3SPY",
+      "discovery_reasons": [
+        {
+          "strategy": "direct_friend",
+          "detail": "Direct public friend of target (Aldesmodeus)",
+          "source_endpoint": "https://friends.roblox.com/v1/users/1504805831/friends",
+          "prior_weight": 0.38
+        }
+      ],
+      "baseline_score": 0.1059,
+      "ml_score": null,
+      "combined_score": 0.1059,
+      "confidence_band": "Insufficient evidence",
+      "confidence_interpretation": "Publicly observable signals do not provide meaningful evidence of shared account operation.",
+      "threshold_status": "provisional",
+      "scoring_mode": "heuristic_baseline_primary",
+      "supporting_evidence": [
+        {
+          "signal_name": "social_graph_overlap",
+          "family": "social_graph",
+          "direction": "supporting",
+          "strength": "medium",
+          "value_summary": "direct_friend=True, mutual_friends=3 (containment=0.07)",
+          "explanation": "Direct public friends, sharing 3 mutual third-party friend(s) (containment 0.07).",
+          "contribution": 0.0899
+        }
+      ],
+      "conflicting_evidence": [
+        {
+          "signal_name": "username_lexical_dissimilarity",
+          "family": "lexical_naming",
+          "direction": "against",
+          "strength": "low",
+          "value_summary": "core_lcs=0.00, display_sim=0.00",
+          "explanation": "No observable lexical stem overlap between 'Aldesmodeus' ('Aldes') and 'G4M3SPY' ('G4M3SPY').",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "only_popular_groups_shared",
+          "family": "group_structure",
+          "direction": "against",
+          "strength": "medium",
+          "value_summary": "shared_groups=3 (all >2,500 members)",
+          "explanation": "Shared groups consist solely of large/popular communities with low discriminative value for identity linkage.",
+          "contribution": 0.0
+        }
+      ],
+      "missing_evidence": [
+        {
+          "signal_name": "favorite_games_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'favorite_games_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "created_games_similarity",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'created_games_similarity' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "inventory_asset_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'inventory_asset_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "activity_timestamp_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'activity_timestamp_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:badges.user_badges",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://badges.roblox.com/v1/users/{userId}/badges requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followers_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followers requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followings_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followings requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        }
+      ],
+      "family_scores": {
+        "lexical_naming": 0.0,
+        "group_structure": 0.0052,
+        "social_graph": 0.4493,
+        "profile_avatar": 0.0525,
+        "activity_games": 0.0,
+        "graph_topology": 0.4791
+      },
+      "feature_contributions": {
+        "username_char_ngram_sim": 0.0,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.0,
+        "shared_distinctive_affix_score": 0.0,
+        "group_jaccard": 0.0005,
+        "rarity_weighted_group_sim": 0.001,
+        "small_group_co_membership_score": 0.0,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 0.084,
+        "mutual_friends_jaccard": 0.0013,
+        "mutual_friends_containment": 0.0046,
+        "description_similarity": 0.0,
+        "avatar_asset_overlap": 0.0,
+        "avatar_style_similarity": 0.0042,
+        "creation_burst_proximity": 0.0,
+        "graph_adamic_adar": 0.0175,
+        "graph_resource_allocation": 0.0103,
+        "graph_personalized_pagerank": 0.0058,
+        "graph_same_community": 0.0
+      },
+      "raw_features": {
+        "username_char_ngram_sim": 0.0,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.0,
+        "shared_distinctive_affix_score": 0.0,
+        "group_jaccard": 0.018,
+        "rarity_weighted_group_sim": 0.0112,
+        "small_group_co_membership_score": 0.0,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 1.0,
+        "mutual_friends_jaccard": 0.028,
+        "mutual_friends_containment": 0.0652,
+        "description_similarity": 0.0,
+        "avatar_asset_overlap": 0.0,
+        "avatar_style_similarity": 0.35,
+        "creation_burst_proximity": 0.0,
+        "favorite_games_overlap": null,
+        "created_games_similarity": null,
+        "inventory_asset_overlap": null,
+        "activity_timestamp_overlap": null,
+        "graph_adamic_adar": 0.7123,
+        "graph_resource_allocation": 0.4895,
+        "graph_personalized_pagerank": 0.4148,
+        "graph_same_community": 0.0
+      },
+      "graph_metrics": {
+        "graph_adamic_adar": 0.7123,
+        "graph_resource_allocation": 0.4895,
+        "graph_personalized_pagerank": 0.4148,
+        "graph_same_community": 0.0
+      },
+      "unsupervised_signals": {
+        "isolation_forest_anomaly_score": 0.478,
+        "lof_outlier_flag": 0.0,
+        "pairwise_signal_density": 0.1626,
+        "profile_archetype": "standard_active_profile",
+        "note": "Unsupervised profile archetype is separate from linkage score; sparse/outlier profiles are not automatically alts."
+      },
+      "uncertainty_notes": [
+        "Public Roblox telemetry cannot observe IP addresses, hardware/device fingerprints, or authentication cookies; scores reflect behavioral/structural correlation, not proof of identity."
+      ],
+      "alternative_explanations": [
+        "Accounts may belong to independent players who happen to intersect in one or more public communities or friend circles."
+      ],
+      "data_sources": [
+        "friends.followers_count",
+        "friends.followings_count",
+        "games.user_created",
+        "games.user_favorites",
+        "inventory.can_view",
+        "users.profile",
+        "users.username_history"
+      ],
+      "model_version": "1.0.0-baseline+hgbt",
+      "feature_schema_version": "1.0.0"
+    },
+    {
+      "candidate_user_id": 378151036,
+      "candidate_username": "Plushpigggy",
+      "candidate_display_name": "Plushpiggy",
+      "discovery_reasons": [
+        {
+          "strategy": "direct_friend",
+          "detail": "Direct public friend of target (Aldesmodeus)",
+          "source_endpoint": "https://friends.roblox.com/v1/users/1504805831/friends",
+          "prior_weight": 0.38
+        }
+      ],
+      "baseline_score": 0.1049,
+      "ml_score": null,
+      "combined_score": 0.1049,
+      "confidence_band": "Insufficient evidence",
+      "confidence_interpretation": "Publicly observable signals do not provide meaningful evidence of shared account operation.",
+      "threshold_status": "provisional",
+      "scoring_mode": "heuristic_baseline_primary",
+      "supporting_evidence": [
+        {
+          "signal_name": "social_graph_overlap",
+          "family": "social_graph",
+          "direction": "supporting",
+          "strength": "medium",
+          "value_summary": "direct_friend=True, mutual_friends=1 (containment=0.02)",
+          "explanation": "Direct public friends, sharing 1 mutual third-party friend(s) (containment 0.02).",
+          "contribution": 0.0856
+        }
+      ],
+      "conflicting_evidence": [
+        {
+          "signal_name": "username_lexical_dissimilarity",
+          "family": "lexical_naming",
+          "direction": "against",
+          "strength": "low",
+          "value_summary": "core_lcs=0.00, display_sim=0.00",
+          "explanation": "No observable lexical stem overlap between 'Aldesmodeus' ('Aldes') and 'Plushpigggy' ('Plushpiggy').",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "only_popular_groups_shared",
+          "family": "group_structure",
+          "direction": "against",
+          "strength": "medium",
+          "value_summary": "shared_groups=1 (all >2,500 members)",
+          "explanation": "Shared groups consist solely of large/popular communities with low discriminative value for identity linkage.",
+          "contribution": 0.0
+        }
+      ],
+      "missing_evidence": [
+        {
+          "signal_name": "favorite_games_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'favorite_games_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "created_games_similarity",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'created_games_similarity' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "inventory_asset_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'inventory_asset_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "activity_timestamp_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'activity_timestamp_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:badges.user_badges",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://badges.roblox.com/v1/users/{userId}/badges requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followers_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followers requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followings_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followings requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        }
+      ],
+      "family_scores": {
+        "lexical_naming": 0.0,
+        "group_structure": 0.0031,
+        "social_graph": 0.4278,
+        "profile_avatar": 0.07,
+        "activity_games": 0.0,
+        "graph_topology": 0.5124
+      },
+      "feature_contributions": {
+        "username_char_ngram_sim": 0.0,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.0,
+        "shared_distinctive_affix_score": 0.0,
+        "group_jaccard": 0.0005,
+        "rarity_weighted_group_sim": 0.0004,
+        "small_group_co_membership_score": 0.0,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 0.084,
+        "mutual_friends_jaccard": 0.0004,
+        "mutual_friends_containment": 0.0012,
+        "description_similarity": 0.0,
+        "avatar_asset_overlap": 0.0014,
+        "avatar_style_similarity": 0.0042,
+        "creation_burst_proximity": 0.0,
+        "graph_adamic_adar": 0.0126,
+        "graph_resource_allocation": 0.0097,
+        "graph_personalized_pagerank": 0.003,
+        "graph_same_community": 0.0105
+      },
+      "raw_features": {
+        "username_char_ngram_sim": 0.0,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.0,
+        "shared_distinctive_affix_score": 0.0,
+        "group_jaccard": 0.0175,
+        "rarity_weighted_group_sim": 0.0046,
+        "small_group_co_membership_score": 0.0,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 1.0,
+        "mutual_friends_jaccard": 0.0082,
+        "mutual_friends_containment": 0.0169,
+        "description_similarity": 0.0,
+        "avatar_asset_overlap": 0.05,
+        "avatar_style_similarity": 0.35,
+        "creation_burst_proximity": 0.0,
+        "favorite_games_overlap": null,
+        "created_games_similarity": null,
+        "inventory_asset_overlap": null,
+        "activity_timestamp_overlap": null,
+        "graph_adamic_adar": 0.5158,
+        "graph_resource_allocation": 0.4628,
+        "graph_personalized_pagerank": 0.2153,
+        "graph_same_community": 1.0
+      },
+      "graph_metrics": {
+        "graph_adamic_adar": 0.5158,
+        "graph_resource_allocation": 0.4628,
+        "graph_personalized_pagerank": 0.2153,
+        "graph_same_community": 1.0
+      },
+      "unsupervised_signals": {
+        "isolation_forest_anomaly_score": 0.4191,
+        "lof_outlier_flag": 0.0,
+        "pairwise_signal_density": 0.1916,
+        "profile_archetype": "standard_active_profile",
+        "note": "Unsupervised profile archetype is separate from linkage score; sparse/outlier profiles are not automatically alts."
+      },
+      "uncertainty_notes": [
+        "Public Roblox telemetry cannot observe IP addresses, hardware/device fingerprints, or authentication cookies; scores reflect behavioral/structural correlation, not proof of identity."
+      ],
+      "alternative_explanations": [
+        "Accounts may belong to independent players who happen to intersect in one or more public communities or friend circles."
+      ],
+      "data_sources": [
+        "friends.followers_count",
+        "friends.followings_count",
+        "games.user_created",
+        "games.user_favorites",
+        "inventory.can_view",
+        "users.profile",
+        "users.username_history"
+      ],
+      "model_version": "1.0.0-baseline+hgbt",
+      "feature_schema_version": "1.0.0"
+    },
+    {
+      "candidate_user_id": 4554046859,
+      "candidate_username": "Yourboydele",
+      "candidate_display_name": "Leonard",
+      "discovery_reasons": [
+        {
+          "strategy": "group_owner",
+          "detail": "Owner of group 'Dele squad' (ID 32979375, members=31, target role='Member' rank=1)",
+          "source_endpoint": "https://groups.roblox.com/v1/users/1504805831/groups/roles",
+          "prior_weight": 0.401
+        },
+        {
+          "strategy": "small_group_co_member",
+          "detail": "Co-member in small group 'Dele squad' (ID 32979375, members=31, candidate role='Owner' rank=255)",
+          "source_endpoint": "https://groups.roblox.com/v1/groups/32979375/users",
+          "prior_weight": 0.361
+        }
+      ],
+      "baseline_score": 0.0652,
+      "ml_score": null,
+      "combined_score": 0.0652,
+      "confidence_band": "Insufficient evidence",
+      "confidence_interpretation": "Publicly observable signals do not provide meaningful evidence of shared account operation.",
+      "threshold_status": "provisional",
+      "scoring_mode": "heuristic_baseline_primary",
+      "supporting_evidence": [
+        {
+          "signal_name": "rare_group_and_role_overlap",
+          "family": "group_structure",
+          "direction": "supporting",
+          "strength": "medium",
+          "value_summary": "rarity_sim=0.22, elevated_role=0.00",
+          "explanation": "Co-membership and/or shared high rank in 1 group(s), including: Dele squad (N=31, roles: Member/Owner).",
+          "contribution": 0.0639
+        }
+      ],
+      "conflicting_evidence": [
+        {
+          "signal_name": "username_lexical_dissimilarity",
+          "family": "lexical_naming",
+          "direction": "against",
+          "strength": "low",
+          "value_summary": "core_lcs=0.00, display_sim=0.10",
+          "explanation": "No observable lexical stem overlap between 'Aldesmodeus' ('Aldes') and 'Yourboydele' ('Leonard').",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "no_social_graph_connection",
+          "family": "social_graph",
+          "direction": "against",
+          "strength": "medium",
+          "value_summary": "direct_friend=False, mutual_friends=0 (candidate_friends=8)",
+          "explanation": "No direct friendship and zero mutual friends observed between the two accounts.",
+          "contribution": 0.0
+        }
+      ],
+      "missing_evidence": [
+        {
+          "signal_name": "created_games_similarity",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'created_games_similarity' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "inventory_asset_overlap",
+          "family": "activity_games",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "unavailable / empty",
+          "explanation": "Feature 'inventory_asset_overlap' could not be evaluated because one or both accounts had no public data or restricted visibility for this signal.",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:badges.user_badges",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://badges.roblox.com/v1/users/{userId}/badges requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followers_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followers requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:friends.followings_list",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "https://friends.roblox.com/v1/users/{userId}/followings requires authentication (HTTP 401 code 9002)",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:inventory.can_view",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "Rate limit (HTTP 429) persisted on inventory.can_view after 1 attempts",
+          "contribution": 0.0
+        },
+        {
+          "signal_name": "source:users.username_history",
+          "family": "data_availability",
+          "direction": "missing",
+          "strength": "info",
+          "value_summary": "restricted / unqueried",
+          "explanation": "Rate limit (HTTP 429) persisted on users.username_history after 1 attempts",
+          "contribution": 0.0
+        }
+      ],
+      "family_scores": {
+        "lexical_naming": 0.0168,
+        "group_structure": 0.2145,
+        "social_graph": 0.0,
+        "profile_avatar": 0.0525,
+        "activity_games": 0.0,
+        "graph_topology": 0.0842
+      },
+      "feature_contributions": {
+        "username_char_ngram_sim": 0.0,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.005,
+        "shared_distinctive_affix_score": 0.0,
+        "group_jaccard": 0.0005,
+        "rarity_weighted_group_sim": 0.0201,
+        "small_group_co_membership_score": 0.0438,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 0.0,
+        "mutual_friends_jaccard": 0.0,
+        "mutual_friends_containment": 0.0,
+        "description_similarity": 0.0,
+        "avatar_asset_overlap": 0.0,
+        "avatar_style_similarity": 0.0042,
+        "creation_burst_proximity": 0.0,
+        "favorite_games_overlap": 0.0,
+        "activity_timestamp_overlap": 0.0,
+        "graph_adamic_adar": 0.0017,
+        "graph_resource_allocation": 0.003,
+        "graph_personalized_pagerank": 0.0012,
+        "graph_same_community": 0.0
+      },
+      "raw_features": {
+        "username_char_ngram_sim": 0.0,
+        "username_lcs_ratio": 0.0,
+        "display_name_similarity": 0.1048,
+        "shared_distinctive_affix_score": 0.0,
+        "group_jaccard": 0.0182,
+        "rarity_weighted_group_sim": 0.2228,
+        "small_group_co_membership_score": 0.4862,
+        "shared_elevated_role_score": 0.0,
+        "is_direct_friend": 0.0,
+        "mutual_friends_jaccard": 0.0,
+        "mutual_friends_containment": 0.0,
+        "description_similarity": 0.0,
+        "avatar_asset_overlap": 0.0,
+        "avatar_style_similarity": 0.35,
+        "creation_burst_proximity": 0.0,
+        "favorite_games_overlap": 0.0,
+        "created_games_similarity": null,
+        "inventory_asset_overlap": null,
+        "activity_timestamp_overlap": 0.0,
+        "graph_adamic_adar": 0.0697,
+        "graph_resource_allocation": 0.1419,
+        "graph_personalized_pagerank": 0.0864,
+        "graph_same_community": 0.0
+      },
+      "graph_metrics": {
+        "graph_adamic_adar": 0.0697,
+        "graph_resource_allocation": 0.1419,
+        "graph_personalized_pagerank": 0.0864,
+        "graph_same_community": 0.0
+      },
+      "unsupervised_signals": {
+        "isolation_forest_anomaly_score": 0.5857,
+        "lof_outlier_flag": 0.0,
+        "pairwise_signal_density": 0.0705,
+        "profile_archetype": "standard_active_profile",
+        "note": "Unsupervised profile archetype is separate from linkage score; sparse/outlier profiles are not automatically alts."
+      },
+      "uncertainty_notes": [
+        "Public Roblox telemetry cannot observe IP addresses, hardware/device fingerprints, or authentication cookies; scores reflect behavioral/structural correlation, not proof of identity."
+      ],
+      "alternative_explanations": [
+        "Accounts may belong to independent players who happen to intersect in one or more public communities or friend circles."
+      ],
+      "data_sources": [
+        "friends.followers_count",
+        "friends.followings_count",
+        "games.user_created",
+        "games.user_favorites",
+        "inventory.can_view",
+        "users.profile",
+        "users.username_history"
+      ],
+      "model_version": "1.0.0-baseline+hgbt",
+      "feature_schema_version": "1.0.0"
+    }
+  ],
+  "graph_summary": {
+    "total_nodes": 171,
+    "total_edges": 400,
+    "user_nodes": 19,
+    "communities_detected": 5
+  },
+  "data_freshness": {
+    "live_http_requests": 110,
+    "cache_hits": 0,
+    "retries_performed": 3,
+    "rate_limits_encountered": 10,
+    "http_status_counts": {
+      "200": 100,
+      "429": 10
+    },
+    "cache_ttl_seconds": 3600
+  },
+  "known_limitations": [
+    "Estimates reflect publicly observable correlations and must be treated as analytical leads, not definitive identity attribution.",
+    "Unlinked alternative accounts that share no naming stems, friends, groups, or public assets with the target cannot be discovered via public APIs.",
+    "Roblox restricts unauthenticated access to user badge lists (badges.roblox.com) and follower/following lists (friends.roblox.com) with HTTP 401.",
+    "Accounts in the same small clan, roleplay division, or development team often share high ranks and mutual friends without sharing a single operator."
+  ],
+  "runtime_seconds": 27.793,
+  "resource_usage": {
+    "rss_memory_mb": 194.35,
+    "memory_delta_mb": 9.71,
+    "logical_cpus": 16,
+    "physical_cpus": 8,
+    "available_ram_mb": 2434.6,
+    "gpu_available": false,
+    "gpu_name": null,
+    "worker_threads_used": 4
+  }
+}
